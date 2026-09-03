@@ -27,18 +27,18 @@ const tools = [
     eyebrow: '🎯 Assessment Engine',
     subject: 'Assess360%20%E2%80%94%20question',
     metaTitle: 'Assess360 — assessments that score, segment & report automatically',
-    metaDesc: 'Assess360 builds scored, branching 360° assessments that segment leads and deliver instant personalised reports — beyond Google Forms, JotForm, Typeform, AppSheet and ScoreApp.',
+    metaDesc: 'Assess360 builds scored, multi-section 360° assessments that segment leads and deliver instant personalised reports — beyond Google Forms, JotForm, Typeform, AppSheet and ScoreApp.',
     tileLines: [
-      'Build scored, branching, <b>360° assessments</b> that segment leads automatically.',
+      'Build scored, multi-section <b>360° assessments</b> that segment leads automatically.',
       'Delivers a <b>personalised result page &amp; PDF report</b> the instant someone finishes.',
       "What Google Forms, JotForm, Typeform, AppSheet &amp; even ScoreApp <b>can't</b> do — done here."
     ],
-    lede: 'Scored, branching, 360° assessments that <b>segment every lead automatically</b> and hand them a personalised result the instant they finish. This is where form builders stop and Assess360 begins.',
+    lede: 'Scored, multi-dimensional 360° assessments that <b>segment every lead automatically</b> and hand them a personalised result the instant they finish. This is where form builders stop and Assess360 begins.',
     heroNote: 'Free to start · No credit card',
     whatTitle: 'What it does',
     whatItDoes: [
       '<b>Multi-dimensional scoring</b> — weight answers, build categories, and produce a real diagnostic, not just a form response.',
-      '<b>Smart branching</b> — the next question adapts to the last answer, so every respondent gets a relevant path.',
+      '<b>Result tiers</b> — map score ranges to tailored outcomes, so each band gets its own message.',
       '<b>360° / multi-rater</b> — collect self + peer + coach input and roll it into one picture.',
       '<b>Instant personalised report</b> — a tailored result page and downloadable PDF the moment they submit.',
       '<b>Auto-segmentation &amp; lead scoring</b> — respondents are tagged and prioritised for follow-up automatically.'
@@ -62,39 +62,39 @@ const tools = [
     slug: 'a-video-router',
     name: 'A Video Router',
     icon: '🔀',
-    kicker: 'Smart Video Delivery',
-    eyebrow: '🔀 Smart Video Delivery',
+    kicker: 'Intelligent Video Routing',
+    eyebrow: '🔀 Intelligent Video Routing',
     subject: 'A%20Video%20Router%20%E2%80%94%20question',
-    metaTitle: 'A Video Router — send every viewer to the right video & next step',
-    metaDesc: 'A Video Router builds conditional video journeys that route each viewer by tag, source and behaviour and trigger the next action — the one video job n8n, Pabbly and generic automation can\'t do.',
+    metaTitle: 'A Video Router — route any video from source to destination, automatically',
+    metaDesc: 'A Video Router captures video from Zoom, local disk and other sources and auto-routes it to YouTube, your LMS, cloud storage and more — the large-file video job n8n, Pabbly and Zapier can\'t handle.',
     tileLines: [
-      'Routes each viewer to the <b>right video &amp; next step</b> based on tag, source and behaviour.',
-      'Build conditional video journeys that <b>trigger actions</b> — no glue-code funnels.',
-      '"I already have n8n / Pabbly / xyz" — this does the one video thing they can\'t.'
+      'Capture from <b>Zoom, local disk, any source</b> → auto-route to <b>YouTube, your LMS, cloud</b>.',
+      '<b>AI-driven routing</b> for the large video files that choke n8n, Pabbly &amp; Zapier.',
+      '"I already have an automation tool" — none of them actually move your video.'
     ],
-    lede: 'Anyone landing on a "video tool" thinks one thing: <b>"I have n8n, I use Pabbly, I\'ve got xyz — I don\'t need this."</b> Here\'s what breaks that: none of them route a <b>viewer</b> through the right video path and fire the next step. A Video Router does exactly that.',
+    lede: 'Anyone landing on a "video tool" thinks one thing: <b>"I have n8n, I use Pabbly, I\'ve got xyz — I don\'t need this."</b> Here\'s what breaks that: none of them actually move a large video from <b>Zoom or your disk to YouTube and your LMS</b>. A Video Router is the intelligent routing layer that does — capture from any source, publish to any destination.',
     heroNote: 'Free to start · No credit card',
     whatTitle: 'What it does',
     whatItDoes: [
-      '<b>Route by who they are</b> — tag, traffic source, campaign, past behaviour all decide which video plays next.',
-      '<b>Conditional journeys</b> — watched 70%? Send to the offer. Bounced? Send to a re-hook. All automatic.',
-      '<b>Trigger actions from the video</b> — tag, notify, book, or hand off to your funnel at the right second.',
-      '<b>One link, many outcomes</b> — a single share link adapts per viewer instead of a fixed page.',
-      '<b>Works with your stack</b> — sits on top of the automation you already run, doing the part it can\'t.'
+      '<b>Pull from any source</b> — Zoom recordings, local disk, cloud drives, direct links.',
+      '<b>Route to any destination</b> — YouTube, your LMS, cloud storage, and more.',
+      '<b>AI-assisted routing</b> — the right video lands in the right place automatically.',
+      '<b>Built for big video</b> — handles large files that break generic automation and API limits.',
+      '<b>One hands-off pipeline</b> — record once, and it arrives everywhere it should.'
     ],
     versus: {
       title: "What the others can't do",
-      intro: 'Your automation tools move <b>data</b>. None of them move a <b>viewer</b> through video.',
-      named: ['n8n', 'Pabbly', 'Zapier', 'Make', 'plain embeds'],
+      intro: 'Your automation tools move <b>data</b>, not <b>video</b>. Large recordings break them.',
+      named: ['n8n', 'Pabbly', 'Zapier', 'Make', 'manual download + re-upload'],
       points: [
-        'They react <b>after</b> a webhook. A Video Router decides <b>during</b> the watch.',
-        'No viewer-aware branching, no "which video next" logic, no in-video triggers.',
-        "You'd have to duct-tape five tools to fake it — and still not get per-viewer routing."
+        'They choke on large video files and provider API limits — A Video Router is built for video.',
+        'No native Zoom → YouTube → LMS video pipeline in a general automation tool.',
+        'Stop downloading a recording and re-uploading it to three places by hand.'
       ],
       punch: "That's the gap this tool was built to close."
     },
-    ctaTitle: 'Stop showing everyone the same video.',
-    ctaText: 'Route each viewer to the next best step and watch the funnel tighten. Free to start.'
+    ctaTitle: 'Record once. It lands everywhere.',
+    ctaText: 'Route your first Zoom recording to YouTube and your LMS — automatically. Free to start.'
   },
 
   {
