@@ -15,7 +15,8 @@ const contact = {
 const site = {
   name: 'Power Tools for Coaches',
   domain: 'powertools.divineleads.guru',
-  brandline: "Six tools that do what the popular apps can't — built for coaches by DivineLeads."
+  brandline: "Six tools that do what the popular apps can't — built for coaches by DivineLeads.",
+  assetVersion: '3'
 };
 
 const tools = [
@@ -66,35 +67,35 @@ const tools = [
     eyebrow: '🔀 Intelligent Video Routing',
     subject: 'A%20Video%20Router%20%E2%80%94%20question',
     metaTitle: 'A Video Router — route any video from source to destination, automatically',
-    metaDesc: 'A Video Router captures video from Zoom, local disk and other sources and auto-routes it to YouTube, your LMS, cloud storage and more — the large-file video job n8n, Pabbly and Zapier can\'t handle.',
+    metaDesc: 'A Video Router pulls a recording from Zoom, local disk or any source, publishes it to YouTube, your LMS or cloud, sets the YouTube title and description, and deletes the Zoom copy — all from one place.',
     tileLines: [
-      'Capture from <b>Zoom, local disk, any source</b> → auto-route to <b>YouTube, your LMS, cloud</b>.',
-      '<b>AI-driven routing</b> for the large video files that choke n8n, Pabbly &amp; Zapier.',
-      '"I already have an automation tool" — none of them actually move your video.'
+      'Pull a recording from <b>Zoom / local disk</b> → publish to <b>YouTube, your LMS, cloud</b> in one move.',
+      '<b>Set the YouTube title &amp; description</b> and <b>delete the Zoom copy</b> — without opening either.',
+      'No heavy locked-in subscription, no big files dropping midway, no juggling five steps.'
     ],
-    lede: 'Anyone landing on a "video tool" thinks one thing: <b>"I have n8n, I use Pabbly, I\'ve got xyz — I don\'t need this."</b> Here\'s what breaks that: none of them actually move a large video from <b>Zoom or your disk to YouTube and your LMS</b>. A Video Router is the intelligent routing layer that does — capture from any source, publish to any destination.',
+    lede: 'A big recording, and then the grind: a pricey locked-in tool, uploads that <b>drop midway</b> on large files, and five manual steps across Zoom, YouTube and your LMS. A Video Router does the whole hop in one move — <b>pull the video, publish it, set the YouTube title &amp; description, and delete the Zoom copy</b> — without you ever opening Zoom or YouTube.',
     heroNote: 'Free to start · No credit card',
     whatTitle: 'What it does',
     whatItDoes: [
-      '<b>Pull from any source</b> — Zoom recordings, local disk, cloud drives, direct links.',
-      '<b>Route to any destination</b> — YouTube, your LMS, cloud storage, and more.',
-      '<b>AI-assisted routing</b> — the right video lands in the right place automatically.',
-      '<b>Built for big video</b> — handles large files that break generic automation and API limits.',
-      '<b>One hands-off pipeline</b> — record once, and it arrives everywhere it should.'
+      '<b>Pull from the source</b> — Zoom recordings, local disk, cloud drives, direct links.',
+      '<b>Publish to any destination</b> — YouTube, your LMS, cloud storage, and more.',
+      '<b>Edit metadata in-flow</b> — set or change the YouTube title &amp; description right from here.',
+      '<b>Clean up automatically</b> — delete the recording from Zoom once it is safely routed.',
+      '<b>Handles big files</b> — large videos that drop midway elsewhere go through in one pass.'
     ],
     versus: {
       title: "What the others can't do",
-      intro: 'Your automation tools move <b>data</b>, not <b>video</b>. Large recordings break them.',
-      named: ['n8n', 'Pabbly', 'Zapier', 'Make', 'manual download + re-upload'],
+      intro: "The pain isn't moving a file once — it's the locked-in cost, the drop-offs, and the endless tab-juggling.",
+      named: ['Heavy locked-in subscriptions', 'n8n / Pabbly / Zapier', 'Manual download + re-upload'],
       points: [
-        'They choke on large video files and provider API limits — A Video Router is built for video.',
-        'No native Zoom → YouTube → LMS video pipeline in a general automation tool.',
-        'Stop downloading a recording and re-uploading it to three places by hand.'
+        "They can't <b>delete the recording from Zoom</b> for you — you go back and do it by hand.",
+        "They can't <b>set or edit the YouTube title &amp; description</b> without you opening YouTube.",
+        "Big files drop midway, and you're left juggling Zoom, YouTube and your LMS across tabs."
       ],
-      punch: "That's the gap this tool was built to close."
+      punch: 'A Video Router owns the whole hop end to end — one move, no tab-juggling.'
     },
-    ctaTitle: 'Record once. It lands everywhere.',
-    ctaText: 'Route your first Zoom recording to YouTube and your LMS — automatically. Free to start.'
+    ctaTitle: 'One move: recorded → published → cleaned up.',
+    ctaText: 'Route a Zoom recording to YouTube and your LMS, set its title, and clear the Zoom copy — automatically. Free to start.'
   },
 
   {
