@@ -1,0 +1,35 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header', { page: 'policy' }) %>
+
+<div class="page-title"><div class="wrap"><div class="prose"><h1><%= pageTitle %></h1></div></div></div>
+
+<section class="section" style="padding-top:16px;">
+  <div class="wrap">
+    <article class="prose">
+      <p class="updated">Last updated: 3 September 2026</p>
+
+      <p>The Power Tools for Coaches suite by DivineLeads consists entirely of digital software services. There is no physical product and therefore no physical shipping.</p>
+
+      <h2>1. Digital delivery</h2>
+      <ul>
+        <li>Access to each tool is provided electronically through your online account at powertools.divineleads.guru and related domains.</li>
+        <li>On successful sign-up, free access is provisioned immediately.</li>
+        <li>On a successful paid upgrade, the corresponding features are activated on your account, typically instantly and in any case within 24 hours of payment confirmation.</li>
+      </ul>
+
+      <h2>2. Delivery confirmation</h2>
+      <p>You will receive confirmation by email and/or in-app once your account or upgrade is active. If you do not receive access within 24 hours of payment, contact us and we will resolve it promptly.</p>
+
+      <h2>3. No physical shipping</h2>
+      <p>Because all products are delivered digitally, no shipping charges, couriers, or delivery timelines for physical goods apply.</p>
+
+      <h2>4. Access requirements</h2>
+      <p>To use the Services you need a compatible device, a modern web browser, and an internet connection. For tools that connect third-party services (cloud providers, SMTP servers, payment gateways), you are responsible for maintaining those accounts.</p>
+
+      <h2>5. Help with access</h2>
+      <p>If you have any trouble accessing a purchased feature, email <a href="mailto:<%= contact.email %>?subject=Access%20help"><%= contact.email %></a> with the tool name in the subject line, or WhatsApp <a href="<%= contact.waLink %>"><%= contact.wa %></a>.</p>
+    </article>
+  </div>
+</section>
+
+<%- include('../partials/footer') %>

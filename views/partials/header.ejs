@@ -1,0 +1,19 @@
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/"><span class="mark">⚡</span> Power Tools for Coaches</a>
+    <nav class="nav-links">
+      <% if (page === 'home') { %>
+        <a href="/#tools">Tools</a>
+        <a href="/#contact">Contact</a>
+        <a class="btn btn-primary" href="/#tools">Start Free</a>
+      <% } else if (page === 'tool') { %>
+        <a href="/">← All tools</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-primary" href="#start">Start Free</a>
+      <% } else { %>
+        <a href="/">← All tools</a>
+        <a class="btn btn-primary" href="/#contact">Contact</a>
+      <% } %>
+    </nav>
+  </div>
+</header>

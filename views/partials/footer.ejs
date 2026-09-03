@@ -1,0 +1,21 @@
+<footer class="footer">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="brand" href="/"><span class="mark">⚡</span> Power Tools for Coaches</a>
+        <p class="foot-brand" style="margin-top:14px;"><%= site.brandline %></p>
+      </div>
+      <div>
+        <h4>Tools</h4>
+        <% tools.forEach(function (t) { %><a href="/<%= t.slug %>"><%= t.name %></a><% }); %>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <% policies.forEach(function (p) { %><a href="/<%= p.slug %>"><%= p.label %></a><% }); %>
+      </div>
+    </div>
+    <div class="legal"><span>© 2026 DivineLeads · powertools.divineleads.guru</span><span>WhatsApp 9356819176 · connect@divineleads.guru</span></div>
+  </div>
+</footer>
+</body>
+</html>

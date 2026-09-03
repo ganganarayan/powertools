@@ -1,0 +1,62 @@
+<%- include('partials/head') %>
+<%- include('partials/header', { page: 'tool' }) %>
+
+<section class="hero tool-hero">
+  <div class="wrap">
+    <span class="eyebrow"><%= tool.eyebrow %></span>
+    <h1><%= tool.name %></h1>
+    <p class="lede"><%- tool.lede %></p>
+    <div class="hero-cta">
+      <a class="btn btn-primary btn-lg" id="start" href="#contact">Start free</a>
+      <a class="btn btn-ghost btn-lg" href="/">See all tools</a>
+    </div>
+    <p class="hero-note"><%= tool.heroNote %></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="split">
+      <div class="card">
+        <h3><%= tool.whatTitle %></h3>
+        <ul class="feature-list">
+          <% tool.whatItDoes.forEach(function (i) { %><li><%- i %></li><% }); %>
+        </ul>
+      </div>
+      <div class="versus">
+        <h3><%= tool.versus.title %></h3>
+        <p><%- tool.versus.intro %></p>
+        <div class="named">
+          <% tool.versus.named.forEach(function (n) { %><span><%- n %></span><% }); %>
+        </div>
+        <ul class="feature-list">
+          <% tool.versus.points.forEach(function (p) { %><li><%- p %></li><% }); %>
+        </ul>
+        <p style="margin:0;color:var(--brand-ink);font-weight:600;"><%- tool.versus.punch %></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="cta-band">
+      <h2><%- tool.ctaTitle %></h2>
+      <p><%- tool.ctaText %></p>
+      <a class="btn btn-accent btn-lg" href="#contact">Get started free</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head"><h2>Ask about <%= tool.name %></h2><p><b>Put "<%= tool.name %>" in your subject line</b> so we answer fast.</p></div>
+    <div class="contact">
+      <div class="c-card"><div class="lbl">WhatsApp</div><div class="val"><a href="<%= contact.waLink %>"><%= contact.wa %></a></div></div>
+      <div class="c-card"><div class="lbl">Email</div><div class="val"><a href="mailto:<%= contact.email %>?subject=<%= tool.subject %>"><%= contact.email %></a></div></div>
+      <div class="c-card"><div class="lbl">Subject line</div><div class="val">"<%= tool.name %> — question"</div></div>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

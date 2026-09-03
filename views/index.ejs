@@ -1,0 +1,70 @@
+<%- include('partials/head') %>
+<%- include('partials/header', { page: 'home' }) %>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">⚡ Six power tools · one place</span>
+    <h1>The tools your popular apps <span class="grad">can't replace.</span></h1>
+    <p class="lede">Every coach already has n8n, Pabbly, Typeform, Wistia, a CRM. Each tool below exists for one reason: it does the exact thing those apps <b>can't</b>. Pick what you need — all free to start.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary btn-lg" href="#tools">Explore the tools ↓</a>
+      <a class="btn btn-ghost btn-lg" href="#contact">Talk to us</a>
+    </div>
+    <p class="hero-note">No credit card to start · Built by a coach, for coaches · <b>WhatsApp <%= contact.wa %></b></p>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section class="section" id="tools">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Choose your weapon</h2>
+      <p>Two per row, one job each. Every tile names the apps it beats — because that gap is the whole reason the tool was built.</p>
+    </div>
+
+    <div class="grid">
+      <% tools.forEach(function (t) { %>
+      <article class="tile">
+        <div class="tile-ico"><%= t.icon %></div>
+        <div class="kicker"><%= t.kicker %></div>
+        <h3><%= t.name %></h3>
+        <ul>
+          <% t.tileLines.forEach(function (line) { %><li><%- line %></li><% }); %>
+        </ul>
+        <div class="tile-foot">
+          <a class="explore" href="/<%= t.slug %>">Explore <%= t.name %> →</a>
+          <span class="free-pill">Free to start</span>
+        </div>
+      </article>
+      <% }); %>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Questions about a tool?</h2>
+      <p>Reach out on WhatsApp or email. <b>Mention the tool name in your subject line</b> so we route you to the right answer fast.</p>
+    </div>
+    <div class="contact">
+      <div class="c-card">
+        <div class="lbl">WhatsApp</div>
+        <div class="val"><a href="<%= contact.waLink %>"><%= contact.wa %></a></div>
+      </div>
+      <div class="c-card">
+        <div class="lbl">Email</div>
+        <div class="val"><a href="mailto:<%= contact.email %>"><%= contact.email %></a></div>
+      </div>
+      <div class="c-card">
+        <div class="lbl">Subject line</div>
+        <div class="val">e.g. "Assess360 — question"</div>
+      </div>
+    </div>
+    <p class="contact-note">Tip: telling us which tool you're asking about gets you a faster, sharper reply.</p>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

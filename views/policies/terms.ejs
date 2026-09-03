@@ -1,27 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms &amp; Conditions — Power Tools for Coaches</title>
-<meta name="description" content="Terms and Conditions for the Power Tools for Coaches suite by DivineLeads.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
+<%- include('../partials/head') %>
+<%- include('../partials/header', { page: 'policy' }) %>
 
-<header class="nav">
-  <div class="wrap">
-    <a class="brand" href="index.html"><span class="mark">⚡</span> Power Tools for Coaches</a>
-    <nav class="nav-links">
-      <a href="index.html">← All tools</a>
-      <a class="btn btn-primary" href="index.html#contact">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<div class="page-title"><div class="wrap"><div class="prose"><h1>Terms &amp; Conditions</h1></div></div></div>
+<div class="page-title"><div class="wrap"><div class="prose"><h1><%= pageTitle %></h1></div></div></div>
 
 <section class="section" style="padding-top:16px;">
   <div class="wrap">
@@ -51,7 +31,7 @@
       <p>The Services let you connect third-party tools. We are not responsible for those services, their availability, or their terms. Your use of them is governed by their own agreements.</p>
 
       <h2>6. Payments</h2>
-      <p>Payments are processed by third-party payment providers. By purchasing, you authorise the applicable charges. Refunds are governed by our <a href="refund.html">Refund &amp; Cancellation Policy</a>.</p>
+      <p>Payments are processed by third-party payment providers. By purchasing, you authorise the applicable charges. Refunds are governed by our <a href="/refund">Refund &amp; Cancellation Policy</a>.</p>
 
       <h2>7. Service availability</h2>
       <p>We aim for high availability but do not guarantee uninterrupted or error-free operation. We may modify, suspend, or discontinue features with reasonable notice where practicable.</p>
@@ -63,36 +43,15 @@
       <p>You may stop using the Services at any time. We may suspend or terminate access for breach of these Terms or misuse. On termination, your right to use the Services ends; certain provisions survive.</p>
 
       <h2>10. Disclaimers &amp; limitation of liability</h2>
-      <p>The Services are provided "as is" without warranties of any kind, as further described in our <a href="disclaimer.html">Disclaimer</a>. To the maximum extent permitted by law, our aggregate liability is limited to the amount you paid us in the 3 months preceding the claim.</p>
+      <p>The Services are provided "as is" without warranties of any kind, as further described in our <a href="/disclaimer">Disclaimer</a>. To the maximum extent permitted by law, our aggregate liability is limited to the amount you paid us in the 3 months preceding the claim.</p>
 
       <h2>11. Governing law</h2>
       <p>These Terms are governed by the laws of India, and the courts at our place of business shall have jurisdiction, subject to applicable law.</p>
 
       <h2>12. Contact</h2>
-      <p>Questions about these Terms? Email <a href="mailto:connect@divineleads.guru?subject=Terms%20%E2%80%94%20question">connect@divineleads.guru</a> or WhatsApp <a href="https://wa.me/919356819176">9356819176</a>.</p>
+      <p>Questions about these Terms? Email <a href="mailto:<%= contact.email %>?subject=Terms%20%E2%80%94%20question"><%= contact.email %></a> or WhatsApp <a href="<%= contact.waLink %>"><%= contact.wa %></a>.</p>
     </article>
   </div>
 </section>
 
-<footer class="footer">
-  <div class="wrap">
-    <div class="cols">
-      <div>
-        <a class="brand" href="index.html"><span class="mark">⚡</span> Power Tools for Coaches</a>
-        <p class="foot-brand" style="margin-top:14px;">Six tools that do what the popular apps can't — built for coaches by DivineLeads.</p>
-      </div>
-      <div>
-        <h4>Tools</h4>
-        <a href="assess360.html">Assess360</a><a href="a-video-router.html">A Video Router</a><a href="vidapulse.html">VidaPulse</a><a href="leadengine.html">LeadEngine</a><a href="cloudbridge.html">CloudBridge</a><a href="pulse-email.html">Pulse Email</a>
-      </div>
-      <div>
-        <h4>Legal</h4>
-        <a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a><a href="refund.html">Refund &amp; Cancellation</a><a href="shipping.html">Delivery Policy</a><a href="cookies.html">Cookie Policy</a><a href="disclaimer.html">Disclaimer</a>
-      </div>
-    </div>
-    <div class="legal"><span>© 2026 DivineLeads · powertools.divineleads.guru</span><span>WhatsApp 9356819176 · connect@divineleads.guru</span></div>
-  </div>
-</footer>
-
-</body>
-</html>
+<%- include('../partials/footer') %>
