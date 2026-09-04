@@ -34,6 +34,7 @@ const tools = [
     cure: 'Scores and segments leads <b>before</b> they ever reach your calendar.',
     tileLines: [
       'Build scored, multi-section <b>360° assessments</b> that segment leads automatically.',
+      '<b>Reduces lead cost &amp; qualifies</b> — filters out the leads that would waste your calendar.',
       'Delivers a <b>personalised result page &amp; PDF report</b> the instant someone finishes.',
       "What Google Forms, JotForm, Typeform, AppSheet &amp; even ScoreApp <b>can't</b> do — done here."
     ],
@@ -71,11 +72,11 @@ const tools = [
     subject: 'A%20Video%20Router%20%E2%80%94%20question',
     appUrl: 'https://avr.divineleads.guru',
     metaTitle: 'A Video Router — route any video from source to destination, automatically',
-    metaDesc: 'A Video Router pulls a recording from Zoom, local disk or any source, publishes it to YouTube, your LMS or cloud, sets the YouTube title and description, and deletes the Zoom copy — all from one place.',
+    metaDesc: 'A Video Router pulls a recording from Zoom, Fathom, local disk or any source, publishes it to YouTube, your LMS or cloud, sets the YouTube title and description, and deletes the Zoom copy — all from one place.',
     symptom: 'Your best recording failed at 92% — and sessions rot in a folder.',
-    cure: 'One-move route Zoom / disk → YouTube / LMS / cloud, <b>big files included</b>.',
+    cure: 'One-move route Zoom / Fathom / disk → YouTube / LMS / cloud, <b>big files included</b>.',
     tileLines: [
-      'Pull a recording from <b>Zoom / local disk</b> → publish to <b>YouTube, your LMS, cloud</b> in one move.',
+      'Pull a recording from <b>Zoom / Fathom / local disk</b> → publish to <b>YouTube, your LMS, cloud</b> in one move.',
       '<b>Set the YouTube title &amp; description</b> and <b>delete the Zoom copy</b> — without opening either.',
       'No heavy locked-in subscription, no big files dropping midway, no juggling five steps.'
     ],
@@ -83,7 +84,7 @@ const tools = [
     heroNote: 'Free to start · No credit card',
     whatTitle: 'What it does',
     whatItDoes: [
-      '<b>Pull from the source</b> — Zoom recordings, local disk, cloud drives, direct links.',
+      '<b>Pull from the source</b> — Zoom &amp; Fathom recordings, local disk, cloud drives, direct links.',
       '<b>Publish to any destination</b> — YouTube, your LMS, cloud storage, and more.',
       '<b>Edit metadata in-flow</b> — set or change the YouTube title &amp; description right from here.',
       '<b>Clean up automatically</b> — delete the recording from Zoom once it is safely routed.',
@@ -156,21 +157,22 @@ const tools = [
     subject: 'LeadEngine%20%E2%80%94%20question',
     appUrl: 'https://leadengines.divineleads.guru',
     metaTitle: 'LeadEngine — AI lead-gen to payment to LMS delivery, all in one',
-    metaDesc: 'LeadEngine is not a CRM. It runs the full coach flow — lead generation, nurture, payment and LMS course delivery — in one AI-driven engine. The most-demanded tool by coaches.',
+    metaDesc: 'LeadEngine is not a CRM. It runs the full coach flow — lead generation, nurture, calendar booking, payment and LMS course delivery — in one AI-driven engine with zero transaction fees. The most-demanded tool by coaches.',
     symptom: 'Your funnel is duct-tape across six apps — a lead dies at every handoff.',
-    cure: 'Capture → nurture → payment → LMS, <b>in one flow</b>.',
+    cure: 'Capture → nurture → calendar → payment → LMS in one flow, <b>0 transaction fee</b>.',
     tileLines: [
       'The moment you hear "CRM" you tune out. <b>This isn\'t a CRM.</b>',
-      '<b>Lead-gen → nurture → payment → LMS delivery</b>, all in one flow.',
+      '<b>Lead-gen → nurture → calendar → payment → LMS delivery</b>, all in one flow — <b>0 transaction fee</b>.',
       'The most-demanded tool by coaches — capture to cash to course, automatically.'
     ],
-    lede: 'The second someone says "CRM", coaches tune out — <b>so let\'s be clear: this is not a CRM.</b> LeadEngine is one AI-driven engine that carries a stranger from <b>lead-gen → nurture → payment → course delivery in your LMS</b>. Capture to cash to classroom, in one place.',
+    lede: 'The second someone says "CRM", coaches tune out — <b>so let\'s be clear: this is not a CRM.</b> LeadEngine is one AI-driven engine that carries a stranger from <b>lead-gen → nurture → calendar → payment → course delivery in your LMS</b>. Capture to cash to classroom, in one place — with <b>zero transaction fees</b>.',
     heroNote: 'Free to start · No credit card · The most-demanded tool by coaches',
     whatTitle: 'The whole journey, one engine',
     whatItDoes: [
       '<b>Lead generation</b> — capture pages, forms and quiz hand-offs feed leads straight in.',
       '<b>AI nurture</b> — follow-ups that qualify and warm leads without you babysitting a pipeline.',
-      '<b>Payment</b> — take the sale in-flow; no bouncing the buyer to a disconnected checkout.',
+      '<b>Calendar &amp; booking</b> — leads book the call in-flow, no separate scheduler bolted on.',
+      '<b>Payment</b> — take the sale in-flow with <b>0 transaction fee</b>; no bouncing the buyer to a disconnected checkout.',
       '<b>LMS delivery</b> — the course unlocks automatically the moment payment clears.',
       '<b>One record end-to-end</b> — the same lead, from first click to enrolled student.'
     ],
@@ -191,14 +193,14 @@ const tools = [
 
   {
     slug: 'cloud-copyz',
-    name: 'Cloud Copyz',
+    name: 'Cloudz Copy',
     icon: '☁️',
     kicker: 'Cloud-to-Cloud Transfer',
     eyebrow: '☁️ Cloud-to-Cloud Transfer',
-    subject: 'Cloud%20Copyz%20%E2%80%94%20question',
-    appUrl: 'https://cloudcopyz.divineleads.guru',
-    metaTitle: 'Cloud Copyz — move data between any two clouds, seamlessly',
-    metaDesc: 'Cloud Copyz transfers and syncs data directly between any two clouds — Google Drive, Dropbox, OneDrive, S3 and more — with no downloading or re-uploading.',
+    subject: 'Cloudz%20Copy%20%E2%80%94%20question',
+    appUrl: 'https://cloudzcopy.divineleads.guru',
+    metaTitle: 'Cloudz Copy — move data between any two clouds, seamlessly',
+    metaDesc: 'Cloudz Copy transfers and syncs data directly between any two clouds — Google Drive, Dropbox, OneDrive, S3 and more — with no downloading or re-uploading.',
     symptom: 'Your whole library is stuck in the wrong cloud — and moving it feels like surgery.',
     cure: 'Direct cloud-to-cloud, <b>no download / re-upload</b>.',
     tileLines: [
@@ -206,7 +208,7 @@ const tools = [
       'No downloading, no re-uploading — <b>seamless direct transfer</b>.',
       'Migrate a whole coaching library in a few clicks.'
     ],
-    lede: 'Move your cloud data between <b>any two clouds, seamlessly</b> — no downloading to your laptop, no dragging files, no waiting on your home internet. Point source, point destination, and Cloud Copyz carries it cloud-to-cloud.',
+    lede: 'Move your cloud data between <b>any two clouds, seamlessly</b> — no downloading to your laptop, no dragging files, no waiting on your home internet. Point source, point destination, and Cloudz Copy carries it cloud-to-cloud.',
     heroNote: 'Free to start · No credit card',
     whatTitle: 'What it does',
     whatItDoes: [
