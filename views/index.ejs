@@ -4,11 +4,11 @@
 <!-- HERO -->
 <section class="hero">
   <div class="wrap">
-    <span class="eyebrow">⚡ Six power tools · one place · Especially Built for Coaches</span>
-    <h1>The tools your popular apps <span class="grad">can't replace.</span></h1>
-    <p class="lede">Every coach already has n8n, Pabbly, Typeform, Wistia, a CRM. Each tool below exists for one reason: it does the exact thing those apps <b>can't</b>. Pick what you need — all free to start.</p>
+    <span class="eyebrow">For coaches · 6 tools · free to start</span>
+    <h1>Six leaks. Six tools. <span class="grad">Fix the one that's costing you.</span></h1>
+    <p class="lede">You already own the popular apps — Typeform, Wistia, a CRM, n8n. Each one still leaves a gap. These six close the gaps those apps can't.</p>
     <div class="hero-cta">
-      <a class="btn btn-primary btn-lg" href="#tools">Explore the tools ↓</a>
+      <a class="btn btn-primary btn-lg" href="#tools">See which one you need ↓</a>
       <a class="btn btn-ghost btn-lg" href="#contact">Talk to us</a>
     </div>
     <p class="hero-note">No credit card to start · Built by a coach, for coaches · <b>WhatsApp <%= contact.wa %></b></p>
@@ -29,6 +29,12 @@
         <div class="tile-ico"><%= t.icon %></div>
         <div class="kicker"><%= t.kicker %></div>
         <h3><%= t.name %></h3>
+        <% if (t.symptom) { %>
+        <div class="symptom">
+          <p class="s-pain"><%- t.symptom %></p>
+          <p class="s-fix"><span class="arrow">→</span> <%- t.cure %></p>
+        </div>
+        <% } %>
         <ul>
           <% t.tileLines.forEach(function (line) { %><li><%- line %></li><% }); %>
         </ul>

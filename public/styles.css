@@ -157,6 +157,12 @@ a:hover { text-decoration: underline; }
 .tile ul li { position: relative; padding-left: 26px; margin-bottom: 9px; color: var(--muted); font-size: .97rem; }
 .tile ul li::before { content:"✓"; position:absolute; left:0; top:0; color: var(--ok); font-weight: 800; }
 .tile ul li b { color: var(--text); font-weight: 600; }
+.tile .symptom { margin: 0 0 16px; padding: 12px 14px; border-radius: var(--radius-sm); background: color-mix(in srgb, var(--accent) 12%, var(--surface)); border-left: 3px solid var(--accent); }
+.tile .symptom .s-pain { margin: 0 0 6px; color: var(--text); font-size: .95rem; font-weight: 600; }
+.tile .symptom .s-pain::before { content: "⚠ "; }
+.tile .symptom .s-fix { margin: 0; color: var(--muted); font-size: .93rem; }
+.tile .symptom .s-fix .arrow { color: var(--brand); font-weight: 800; }
+.tile .symptom .s-fix b { color: var(--text); font-weight: 700; }
 .tile .tile-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 6px; }
 .tile .explore { font-family: var(--font-head); font-weight: 700; color: var(--brand); display: inline-flex; align-items: center; gap: 6px; }
 .tile .explore:hover { gap: 10px; text-decoration: none; }

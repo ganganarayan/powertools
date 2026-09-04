@@ -30,6 +30,8 @@ const tools = [
     appUrl: 'https://assess360.divineleads.guru',
     metaTitle: 'Assess360 — assessments that score, segment & report automatically',
     metaDesc: 'Assess360 builds scored, multi-section 360° assessments that segment leads and deliver instant personalised reports — beyond Google Forms, JotForm, Typeform, AppSheet and ScoreApp.',
+    symptom: 'Half your calls were dead before they booked — and you found out too late.',
+    cure: 'Scores and segments leads <b>before</b> they ever reach your calendar.',
     tileLines: [
       'Build scored, multi-section <b>360° assessments</b> that segment leads automatically.',
       'Delivers a <b>personalised result page &amp; PDF report</b> the instant someone finishes.',
@@ -70,6 +72,8 @@ const tools = [
     appUrl: 'https://avr.divineleads.guru',
     metaTitle: 'A Video Router — route any video from source to destination, automatically',
     metaDesc: 'A Video Router pulls a recording from Zoom, local disk or any source, publishes it to YouTube, your LMS or cloud, sets the YouTube title and description, and deletes the Zoom copy — all from one place.',
+    symptom: 'Your best recording failed at 92% — and sessions rot in a folder.',
+    cure: 'One-move route Zoom / disk → YouTube / LMS / cloud, <b>big files included</b>.',
     tileLines: [
       'Pull a recording from <b>Zoom / local disk</b> → publish to <b>YouTube, your LMS, cloud</b> in one move.',
       '<b>Set the YouTube title &amp; description</b> and <b>delete the Zoom copy</b> — without opening either.',
@@ -110,6 +114,8 @@ const tools = [
     appUrl: 'https://vidapulse.io',
     metaTitle: 'VidaPulse — VSL analytics that show where the sale is lost',
     metaDesc: 'VidaPulse maps second-by-second VSL drop-off to your pitch and CTA so you know exactly where your video sales letter loses the sale — the conversion layer missing from Wistia and Vidyard.',
+    symptom: 'Your VSL loses them at the same second — and you\'ve never seen which one.',
+    cure: 'Second-by-second drop-off, <b>mapped to your pitch</b>.',
     tileLines: [
       'Second-by-second <b>VSL drop-off &amp; attention</b> mapped to your pitch and CTA.',
       '<b>Download the sec-by-sec CSV</b> to analyse with your trained AI — pinpoint where the sale slips.',
@@ -151,6 +157,8 @@ const tools = [
     appUrl: 'https://leadengines.divineleads.guru',
     metaTitle: 'LeadEngine — AI lead-gen to payment to LMS delivery, all in one',
     metaDesc: 'LeadEngine is not a CRM. It runs the full coach flow — lead generation, nurture, payment and LMS course delivery — in one AI-driven engine. The most-demanded tool by coaches.',
+    symptom: 'Your funnel is duct-tape across six apps — a lead dies at every handoff.',
+    cure: 'Capture → nurture → payment → LMS, <b>in one flow</b>.',
     tileLines: [
       'The moment you hear "CRM" you tune out. <b>This isn\'t a CRM.</b>',
       '<b>Lead-gen → nurture → payment → LMS delivery</b>, all in one flow.',
@@ -191,6 +199,8 @@ const tools = [
     appUrl: 'https://cloudcopyz.divineleads.guru',
     metaTitle: 'Cloud Copyz — move data between any two clouds, seamlessly',
     metaDesc: 'Cloud Copyz transfers and syncs data directly between any two clouds — Google Drive, Dropbox, OneDrive, S3 and more — with no downloading or re-uploading.',
+    symptom: 'Your whole library is stuck in the wrong cloud — and moving it feels like surgery.',
+    cure: 'Direct cloud-to-cloud, <b>no download / re-upload</b>.',
     tileLines: [
       'Move &amp; sync data between <b>any two clouds</b> — Drive, Dropbox, OneDrive, S3 and more.',
       'No downloading, no re-uploading — <b>seamless direct transfer</b>.',
@@ -231,6 +241,8 @@ const tools = [
     appUrl: 'https://pulseemail.divineleads.guru',
     metaTitle: 'Pulse Email — connect any SMTP and send single, bulk or scheduled email',
     metaDesc: 'Pulse Email sends single, bulk and scheduled email through any SMTP server you connect, and receives webhooks from anywhere to trigger and log mail. Your provider, your deliverability, no per-email markup.',
+    symptom: 'You wrote it — and spam read it first.',
+    cure: 'Your SMTP, your deliverability, <b>no per-email markup</b>.',
     tileLines: [
       '<b>Single, bulk &amp; scheduled</b> sends — connect <b>any SMTP server</b> and it just sends.',
       '<b>Receive webhooks from anywhere</b> to trigger and log email.',
