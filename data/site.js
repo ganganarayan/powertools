@@ -16,7 +16,7 @@ const site = {
   name: 'Power Tools for Coaches',
   domain: 'powertools.divineleads.guru',
   brandline: "Six tools that do what the popular apps can't — built for coaches by DivineLeads.",
-  assetVersion: '3'
+  assetVersion: '4'
 };
 
 const tools = [
@@ -27,6 +27,7 @@ const tools = [
     kicker: 'Assessment Engine',
     eyebrow: '🎯 Assessment Engine',
     subject: 'Assess360%20%E2%80%94%20question',
+    appUrl: 'https://assess360.divineleads.guru',
     metaTitle: 'Assess360 — assessments that score, segment & report automatically',
     metaDesc: 'Assess360 builds scored, multi-section 360° assessments that segment leads and deliver instant personalised reports — beyond Google Forms, JotForm, Typeform, AppSheet and ScoreApp.',
     tileLines: [
@@ -66,6 +67,7 @@ const tools = [
     kicker: 'Intelligent Video Routing',
     eyebrow: '🔀 Intelligent Video Routing',
     subject: 'A%20Video%20Router%20%E2%80%94%20question',
+    appUrl: 'https://avr.divineleads.guru',
     metaTitle: 'A Video Router — route any video from source to destination, automatically',
     metaDesc: 'A Video Router pulls a recording from Zoom, local disk or any source, publishes it to YouTube, your LMS or cloud, sets the YouTube title and description, and deletes the Zoom copy — all from one place.',
     tileLines: [
@@ -105,11 +107,12 @@ const tools = [
     kicker: 'VSL Analytics',
     eyebrow: '📈 VSL Analytics',
     subject: 'VidaPulse%20%E2%80%94%20question',
+    appUrl: 'https://vidapulse.io',
     metaTitle: 'VidaPulse — VSL analytics that show where the sale is lost',
     metaDesc: 'VidaPulse maps second-by-second VSL drop-off to your pitch and CTA so you know exactly where your video sales letter loses the sale — the conversion layer missing from Wistia and Vidyard.',
     tileLines: [
       'Second-by-second <b>VSL drop-off &amp; attention</b> mapped to your pitch and CTA.',
-      'See <b>exactly where your VSL loses the sale</b> — and A/B test the fix.',
+      '<b>Download the sec-by-sec CSV</b> to analyse with your trained AI — pinpoint where the sale slips.',
       'The conversion layer missing from Wistia &amp; Vidyard.'
     ],
     lede: "Your VSL is doing the selling — so why are you flying blind on it? VidaPulse shows the <b>exact second the sale slips away</b>, second by second, mapped to your hook, pitch and CTA. It's the missing conversion layer that Wistia and Vidyard never gave you.",
@@ -120,7 +123,8 @@ const tools = [
       '<b>Pitch &amp; CTA markers</b> — overlay your key moments so you know which line loses viewers.',
       '<b>Per-viewer engagement</b> — who watched, who re-watched, who bailed before the offer.',
       '<b>Conversion correlation</b> — tie watch-behaviour to who actually bought.',
-      '<b>A/B VSL testing</b> — run two versions and let the retention curve pick the winner.'
+      '<b>A/B VSL testing</b> — run two versions and let the retention curve pick the winner.',
+      '<b>Download second-by-second CSV</b> — export the raw retention data and analyse it with your own trained AI.'
     ],
     versus: {
       title: "What the others can't do",
@@ -144,6 +148,7 @@ const tools = [
     kicker: 'AI Lead-Gen Engine',
     eyebrow: '🚀 AI Lead-Generation Engine',
     subject: 'LeadEngine%20%E2%80%94%20question',
+    appUrl: 'https://leadengines.divineleads.guru',
     metaTitle: 'LeadEngine — AI lead-gen to payment to LMS delivery, all in one',
     metaDesc: 'LeadEngine is not a CRM. It runs the full coach flow — lead generation, nurture, payment and LMS course delivery — in one AI-driven engine. The most-demanded tool by coaches.',
     tileLines: [
@@ -177,20 +182,21 @@ const tools = [
   },
 
   {
-    slug: 'cloudbridge',
-    name: 'CloudBridge',
+    slug: 'cloud-copyz',
+    name: 'Cloud Copyz',
     icon: '☁️',
     kicker: 'Cloud-to-Cloud Transfer',
     eyebrow: '☁️ Cloud-to-Cloud Transfer',
-    subject: 'CloudBridge%20%E2%80%94%20question',
-    metaTitle: 'CloudBridge — move data between any two clouds, seamlessly',
-    metaDesc: 'CloudBridge transfers and syncs data directly between any two clouds — Google Drive, Dropbox, OneDrive, S3 and more — with no downloading or re-uploading.',
+    subject: 'Cloud%20Copyz%20%E2%80%94%20question',
+    appUrl: 'https://cloudcopyz.divineleads.guru',
+    metaTitle: 'Cloud Copyz — move data between any two clouds, seamlessly',
+    metaDesc: 'Cloud Copyz transfers and syncs data directly between any two clouds — Google Drive, Dropbox, OneDrive, S3 and more — with no downloading or re-uploading.',
     tileLines: [
       'Move &amp; sync data between <b>any two clouds</b> — Drive, Dropbox, OneDrive, S3 and more.',
       'No downloading, no re-uploading — <b>seamless direct transfer</b>.',
       'Migrate a whole coaching library in a few clicks.'
     ],
-    lede: 'Move your cloud data between <b>any two clouds, seamlessly</b> — no downloading to your laptop, no dragging files, no waiting on your home internet. Point source, point destination, and CloudBridge carries it cloud-to-cloud.',
+    lede: 'Move your cloud data between <b>any two clouds, seamlessly</b> — no downloading to your laptop, no dragging files, no waiting on your home internet. Point source, point destination, and Cloud Copyz carries it cloud-to-cloud.',
     heroNote: 'Free to start · No credit card',
     whatTitle: 'What it does',
     whatItDoes: [
@@ -222,6 +228,7 @@ const tools = [
     kicker: 'SMTP Email Sender',
     eyebrow: '✉️ SMTP Email Sender',
     subject: 'Pulse%20Email%20%E2%80%94%20question',
+    appUrl: 'https://pulseemail.divineleads.guru',
     metaTitle: 'Pulse Email — connect any SMTP and send single, bulk or scheduled email',
     metaDesc: 'Pulse Email sends single, bulk and scheduled email through any SMTP server you connect, and receives webhooks from anywhere to trigger and log mail. Your provider, your deliverability, no per-email markup.',
     tileLines: [

@@ -224,3 +224,17 @@ a:hover { text-decoration: underline; }
 
 .center { text-align:center; }
 .mt-lg { margin-top: 44px; }
+
+/* tile explore button */
+.tile-btn { padding: 10px 18px; font-size: .93rem; }
+
+/* build-for-you offer band */
+.offer .offer-card {
+  background: linear-gradient(135deg, var(--surface-2), var(--surface));
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 48px 34px; text-align: center; box-shadow: var(--shadow);
+}
+.offer-head { font-size: clamp(1.5rem, 3.6vw, 2.3rem); font-weight: 800; max-width: 26ch; margin: 0 auto .5em; }
+.offer-sub { color: var(--muted); font-size: 1.1rem; max-width: 60ch; margin: 0 auto 26px; }

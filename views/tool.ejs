@@ -7,7 +7,7 @@
     <h1><%= tool.name %></h1>
     <p class="lede"><%- tool.lede %></p>
     <div class="hero-cta">
-      <a class="btn btn-primary btn-lg" id="start" href="#contact">Start free</a>
+      <a class="btn btn-primary btn-lg" id="start" href="<%= tool.appUrl %>" target="_blank" rel="noopener">Start free</a>
       <a class="btn btn-ghost btn-lg" href="/">See all tools</a>
     </div>
     <p class="hero-note"><%= tool.heroNote %></p>
@@ -43,7 +43,7 @@
     <div class="cta-band">
       <h2><%- tool.ctaTitle %></h2>
       <p><%- tool.ctaText %></p>
-      <a class="btn btn-accent btn-lg" href="#contact">Get started free</a>
+      <a class="btn btn-accent btn-lg" href="<%= tool.appUrl %>" target="_blank" rel="noopener">Get started free</a>
     </div>
   </div>
 </section>

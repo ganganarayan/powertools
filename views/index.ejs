@@ -4,7 +4,7 @@
 <!-- HERO -->
 <section class="hero">
   <div class="wrap">
-    <span class="eyebrow">⚡ Six power tools · one place</span>
+    <span class="eyebrow">⚡ Six power tools · one place · Especially Built for Coaches</span>
     <h1>The tools your popular apps <span class="grad">can't replace.</span></h1>
     <p class="lede">Every coach already has n8n, Pabbly, Typeform, Wistia, a CRM. Each tool below exists for one reason: it does the exact thing those apps <b>can't</b>. Pick what you need — all free to start.</p>
     <div class="hero-cta">
@@ -20,7 +20,7 @@
   <div class="wrap">
     <div class="section-head">
       <h2>Choose your weapon</h2>
-      <p>Two per row, one job each. Every tile names the apps it beats — because that gap is the whole reason the tool was built.</p>
+      <p>Each one is meant to solve a specific problem that existing tools in the market do not address.</p>
     </div>
 
     <div class="grid">
@@ -33,7 +33,7 @@
           <% t.tileLines.forEach(function (line) { %><li><%- line %></li><% }); %>
         </ul>
         <div class="tile-foot">
-          <a class="explore" href="/<%= t.slug %>">Explore <%= t.name %> →</a>
+          <a class="btn btn-primary tile-btn" href="<%= t.appUrl %>" target="_blank" rel="noopener">Explore <%= t.name %> →</a>
           <span class="free-pill">Free to start</span>
         </div>
       </article>
@@ -64,6 +64,17 @@
       </div>
     </div>
     <p class="contact-note">Tip: telling us which tool you're asking about gets you a faster, sharper reply.</p>
+  </div>
+</section>
+
+<!-- BUILD-FOR-YOU OFFER -->
+<section class="section offer">
+  <div class="wrap">
+    <div class="offer-card">
+      <h2 class="offer-head">As a coach, if you're looking for a specific software solution — email us, we'll build and ship it.</h2>
+      <p class="offer-sub">The one who gives us the biggest problem they're facing gets to use the tool free for the first 5 months after launch.</p>
+      <a class="btn btn-accent btn-lg" href="mailto:<%= contact.email %>?subject=My%20biggest%20problem%20to%20solve">Email your biggest problem →</a>
+    </div>
   </div>
 </section>
 

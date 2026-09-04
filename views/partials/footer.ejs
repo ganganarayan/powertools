@@ -7,7 +7,7 @@
       </div>
       <div>
         <h4>Tools</h4>
-        <% tools.forEach(function (t) { %><a href="/<%= t.slug %>"><%= t.name %></a><% }); %>
+        <% tools.forEach(function (t) { %><a href="<%= t.appUrl %>" target="_blank" rel="noopener"><%= t.name %></a><% }); %>
       </div>
       <div>
         <h4>Legal</h4>
