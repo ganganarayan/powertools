@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" role="img" aria-label="Revenue OS logo">
+  <defs>
+    <linearGradient id="rosBar" x1="0" y1="40" x2="0" y2="8" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6d5cff"/>
+      <stop offset="1" stop-color="#9a7bff"/>
+    </linearGradient>
+  </defs>
+  <!-- ascending revenue bars -->
+  <rect x="8"  y="28" width="8" height="12" rx="2.5" fill="url(#rosBar)"/>
+  <rect x="19" y="22" width="8" height="18" rx="2.5" fill="url(#rosBar)"/>
+  <rect x="30" y="14" width="8" height="26" rx="2.5" fill="url(#rosBar)"/>
+  <!-- rising trend line + arrowhead -->
+  <path d="M9 30 L23 21 L35 12" stroke="#f6b41e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M28 12 L35 12 L35 19" stroke="#f6b41e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

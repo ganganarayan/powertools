@@ -16,7 +16,7 @@ const site = {
   name: 'Power Tools for Coaches',
   domain: 'powertools.divineleads.guru',
   brandline: "Six tools that do what the popular apps can't — built for coaches by DivineLeads.",
-  assetVersion: '4'
+  assetVersion: '5'
 };
 
 const tools = [
@@ -149,46 +149,47 @@ const tools = [
   },
 
   {
-    slug: 'leadengine',
-    name: 'LeadEngine',
-    icon: '🚀',
-    kicker: 'AI Lead-Gen Engine',
-    eyebrow: '🚀 AI Lead-Generation Engine',
-    subject: 'LeadEngine%20%E2%80%94%20question',
-    appUrl: 'https://leadengines.divineleads.guru',
-    metaTitle: 'LeadEngine — AI lead-gen to payment to LMS delivery, all in one',
-    metaDesc: 'LeadEngine is not a CRM. It runs the full coach flow — lead generation, nurture, calendar booking, payment and LMS course delivery — in one AI-driven engine with zero transaction fees. The most-demanded tool by coaches.',
-    symptom: 'Your funnel is duct-tape across six apps — a lead dies at every handoff.',
-    cure: 'Capture → nurture → calendar → payment → LMS in one flow, <b>0 transaction fee</b>.',
+    slug: 'revenue-os',
+    name: 'Revenue OS',
+    icon: '💰',
+    logo: '/logos/revenue-os.svg',
+    kicker: 'Revenue Operating System',
+    eyebrow: '💰 Revenue Operating System',
+    subject: 'Revenue%20OS%20%E2%80%94%20question',
+    appUrl: 'https://revenueos.divineleads.guru',
+    metaTitle: 'Revenue OS — the revenue operating system for coaches',
+    metaDesc: 'Revenue OS runs your whole coach revenue on one system — lead generation, nurture, calendar booking, payment with 0 transaction fee, order bumps, upsells and LMS delivery — in one AI-driven revenue operating system. The most-demanded tool by coaches.',
+    symptom: 'Your revenue lives in six disconnected apps — and nobody owns the number.',
+    cure: 'One system: capture → nurture → calendar → payment → LMS, <b>0 transaction fee</b>.',
     tileLines: [
-      'The moment you hear "CRM" you tune out. <b>This isn\'t a CRM.</b>',
-      '<b>Lead-gen → nurture → calendar → payment → LMS delivery</b>, all in one flow — <b>0 transaction fee</b>.',
-      'The most-demanded tool by coaches — capture to cash to course, automatically.'
+      'You think "CRM." <b>It\'s not — it\'s your revenue operating system.</b>',
+      '<b>Lead-gen → nurture → calendar → payment → LMS delivery</b>, one flow — <b>0 transaction fee</b>.',
+      '<b>Revenue-generating systems built in</b> — order bumps, upsells, follow-up and one revenue dashboard.'
     ],
-    lede: 'The second someone says "CRM", coaches tune out — <b>so let\'s be clear: this is not a CRM.</b> LeadEngine is one AI-driven engine that carries a stranger from <b>lead-gen → nurture → calendar → payment → course delivery in your LMS</b>. Capture to cash to classroom, in one place — with <b>zero transaction fees</b>.',
+    lede: 'You hear "CRM" and tune out — <b>so let\'s be clear: this isn\'t a CRM, it\'s your revenue operating system.</b> Revenue OS carries a stranger from <b>lead-gen → nurture → calendar → payment → course delivery in your LMS</b> — with order bumps, upsells and <b>zero transaction fees</b>. Capture to cash to classroom, on one number.',
     heroNote: 'Free to start · No credit card · The most-demanded tool by coaches',
-    whatTitle: 'The whole journey, one engine',
+    whatTitle: 'The revenue engine, one system',
     whatItDoes: [
       '<b>Lead generation</b> — capture pages, forms and quiz hand-offs feed leads straight in.',
       '<b>AI nurture</b> — follow-ups that qualify and warm leads without you babysitting a pipeline.',
       '<b>Calendar &amp; booking</b> — leads book the call in-flow, no separate scheduler bolted on.',
-      '<b>Payment</b> — take the sale in-flow with <b>0 transaction fee</b>; no bouncing the buyer to a disconnected checkout.',
+      '<b>Payment, 0 transaction fee</b> — take the sale in-flow, with order bumps and upsells built in.',
       '<b>LMS delivery</b> — the course unlocks automatically the moment payment clears.',
-      '<b>One record end-to-end</b> — the same lead, from first click to enrolled student.'
+      '<b>One revenue dashboard</b> — every lead from first click to paying, enrolled student, on one number.'
     ],
     versus: {
       title: 'Why not "just a CRM"?',
-      intro: "A CRM stores contacts and stops. Coaches don't need a filing cabinet — they need the <b>path to enrolment</b> to run itself.",
+      intro: "A CRM stores contacts and stops. Coaches don't need a filing cabinet — they need the <b>system that makes the revenue</b> to run itself.",
       named: ['Generic CRMs', 'Spreadsheets', 'Checkout + LMS glued together'],
       points: [
         'No more stitching a form tool, a payment tool and an LMS with fragile automations.',
-        'Payment and course access are <b>one continuous flow</b>, not three logins.',
-        'Built around how coaches actually sell and deliver — not generic sales teams.'
+        'Payment, upsells and course access are <b>one continuous revenue flow</b>, not three logins.',
+        'Built around how coaches actually make money — not generic sales teams.'
       ],
-      punch: "Call it an engine, because that's what it is."
+      punch: "It's not a CRM — it's the system that makes the revenue."
     },
-    ctaTitle: 'From lead to enrolled student — on autopilot.',
-    ctaText: 'Spin up your LeadEngine free and connect lead-gen, payment and delivery in one flow.'
+    ctaTitle: 'Run your whole revenue on one system.',
+    ctaText: 'Spin up Revenue OS free and connect lead-gen, payment and delivery — with zero transaction fees.'
   },
 
   {
@@ -234,45 +235,45 @@ const tools = [
   },
 
   {
-    slug: 'pulse-email',
-    name: 'Pulse Email',
-    icon: '✉️',
-    kicker: 'SMTP Email Sender',
-    eyebrow: '✉️ SMTP Email Sender',
-    subject: 'Pulse%20Email%20%E2%80%94%20question',
-    appUrl: 'https://pulseemail.divineleads.guru',
-    metaTitle: 'Pulse Email — connect any SMTP and send single, bulk or scheduled email',
-    metaDesc: 'Pulse Email sends single, bulk and scheduled email through any SMTP server you connect, and receives webhooks from anywhere to trigger and log mail. Your provider, your deliverability, no per-email markup.',
-    symptom: 'You wrote it — and spam read it first.',
-    cure: 'Your SMTP, your deliverability, <b>no per-email markup</b>.',
+    slug: 'ai-gita-mentor',
+    name: 'AI Gita Mentor',
+    icon: '🕉️',
+    kicker: 'AI Wisdom Mentor',
+    eyebrow: '🕉️ AI Wisdom Mentor',
+    subject: 'AI%20Gita%20Mentor%20%E2%80%94%20question',
+    appUrl: 'https://ai.applygitawisdom.com',
+    metaTitle: 'AI Gita Mentor — an always-on mentor grounded in Bhagavad Gita wisdom',
+    metaDesc: 'AI Gita Mentor answers life, leadership and mindset questions with guidance grounded in the Bhagavad Gita — pointing to the verse behind every answer, available 24/7 for you and your clients.',
+    symptom: 'Your clients spiral between sessions — and you can\'t be on call 24/7.',
+    cure: 'An always-on mentor grounded in <b>Bhagavad Gita wisdom</b>, answering anytime.',
     tileLines: [
-      '<b>Single, bulk &amp; scheduled</b> sends — connect <b>any SMTP server</b> and it just sends.',
-      '<b>Receive webhooks from anywhere</b> to trigger and log email.',
-      'Your provider, your deliverability, no per-email markup.'
+      'Ask any question and get guidance <b>grounded in the Bhagavad Gita</b> — with the verse behind it.',
+      'A <b>24/7 wisdom companion</b> for you and your clients, between every session.',
+      'Not generic AI fluff — <b>rooted in the Gita</b>, not made up.'
     ],
-    lede: 'Connect <b>any SMTP server</b> and Pulse Email just sends — <b>single, bulk or scheduled</b>. Then it <b>receives webhooks from anywhere</b> to trigger and log mail. Your provider, your deliverability, no per-email markup on top.',
+    lede: 'Your clients don\'t stop needing guidance when the call ends — but you can\'t be on call at 2am. <b>AI Gita Mentor</b> is an always-on mentor grounded in the <b>Bhagavad Gita</b>: ask it anything and it answers from the text, pointing to the verse behind the guidance.',
     heroNote: 'Free to start · No credit card',
     whatTitle: 'What it does',
     whatItDoes: [
-      '<b>Single send</b> — fire a one-off email in seconds.',
-      '<b>Bulk send</b> — push a broadcast to your whole list.',
-      '<b>Scheduled send</b> — queue email to go out at the right time, automatically.',
-      '<b>Bring any SMTP</b> — Gmail, Zoho, Amazon SES, your host, any provider — plug it in and send.',
-      '<b>Inbound webhooks</b> — receive a webhook from any app and let it trigger or log a send.'
+      '<b>Ask anything</b> — career, conflict, fear, focus, purpose — and get a grounded answer, not a platitude.',
+      '<b>Rooted in the Gita</b> — guidance drawn from Bhagavad Gita teachings, with the relevant verse cited.',
+      '<b>Always on</b> — your clients get support the moment they need it, not just in the next session.',
+      '<b>Conversational</b> — it holds the thread and meets each person where they actually are.',
+      '<b>Yours to share</b> — hand it to your audience as a wisdom companion that keeps them close to your work.'
     ],
     versus: {
-      title: 'Why bring-your-own-SMTP wins',
-      intro: 'Most senders lock you to their pipes and mark up every thousand emails.',
-      named: ['Locked-in ESPs', 'Per-email pricing', 'No inbound webhook'],
+      title: "What generic AI can't do",
+      intro: 'Ask a general chatbot for Gita guidance and it improvises — sometimes inventing verses that were never in the text.',
+      named: ['Generic AI chatbots', 'Motivational quote apps', 'A web search'],
       points: [
-        'You keep <b>your</b> sending reputation and provider — not theirs.',
-        'No per-email markup riding on volume you already pay for.',
-        'Webhook-in means the rest of your stack can trigger mail without extra glue.'
+        'They paraphrase a vibe. AI Gita Mentor answers <b>from the Gita</b> and points to the verse.',
+        'No 24/7 companion your clients can actually lean on between sessions.',
+        'Quotes without context vs. wisdom applied to the exact situation they\'re in.'
       ],
-      punch: 'Connect it, and it sends.'
+      punch: "Wisdom that's grounded, not guessed."
     },
-    ctaTitle: 'Your SMTP. Single, bulk, scheduled — done.',
-    ctaText: 'Connect a server free and send your first campaign through your own pipes.'
+    ctaTitle: 'Give your people a mentor that never sleeps.',
+    ctaText: 'Try AI Gita Mentor free and ask it the question your client asked you last week.'
   }
 ];
 

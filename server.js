@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
   res.render('index', Object.assign({}, base, {
     page: 'home',
     title: "Power Tools for Coaches — 6 tools that do what the popular apps can't",
-    description: 'Assess360, A Video Router, VidaPulse, LeadEngine, CloudBridge and Pulse Email — a suite of power tools built for coaches. Free to start.'
+    description: 'Assess360, A Video Router, VidaPulse, Revenue OS, Cloudz Copy and AI Gita Mentor — a suite of power tools built for coaches. Free to start.'
   }));
 });
 
