@@ -39,7 +39,7 @@
           <% t.tileLines.forEach(function (line) { %><li><%- line %></li><% }); %>
         </ul>
         <div class="tile-foot">
-          <a class="btn btn-primary tile-btn" href="<%= t.appUrl %>" target="_blank" rel="noopener">Explore <%= t.name %> →</a>
+          <a class="btn btn-primary tile-btn" href="<%= t.appUrl %>" target="_blank" rel="noopener" data-track="tool_click" data-tool="<%= t.slug %>">Explore <%= t.name %> →</a>
           <span class="free-pill">Free to start</span>
         </div>
       </article>

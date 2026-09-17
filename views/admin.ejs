@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title><%= title %></title>
+<link rel="stylesheet" href="/styles.css?v=<%= site.assetVersion %>">
+<style>
+  .adm-wrap { max-width: 1180px; margin: 0 auto; padding: 28px 20px 64px; }
+  .adm-top { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:14px; margin-bottom:6px; }
+  .adm-top h1 { font-size: 1.5rem; font-weight: 800; }
+  .adm-sub { color: var(--muted); font-size:.9rem; margin: 2px 0 20px; }
+  .ranges { display:flex; gap:6px; }
+  .ranges a { font-size:.85rem; font-weight:600; padding:7px 12px; border-radius:10px; border:1px solid var(--border); color:var(--muted); }
+  .ranges a.active { background: var(--brand); border-color: var(--brand); color:#fff; }
+  .ranges a:hover { text-decoration:none; color: var(--text); }
+  .ranges a.active:hover { color:#fff; }
+  .kpis { display:grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap:14px; margin-bottom:22px; }
+  .kpi { background: var(--surface); border:1px solid var(--border); border-radius: var(--radius-sm); padding:16px 18px; box-shadow: var(--shadow); }
+  .kpi .k-n { font-size:1.9rem; font-weight:800; line-height:1.1; }
+  .kpi .k-l { color:var(--muted); font-size:.82rem; margin-top:4px; text-transform:uppercase; letter-spacing:.05em; }
+  .panel { background: var(--surface); border:1px solid var(--border); border-radius: var(--radius-sm); padding:18px 18px; box-shadow: var(--shadow); }
+  .panel h2 { font-size:.82rem; text-transform:uppercase; letter-spacing:.06em; color:var(--brand); margin-bottom:14px; font-weight:700; }
+  .grid2 { display:grid; grid-template-columns: repeat(auto-fit, minmax(320px,1fr)); gap:16px; margin-bottom:16px; }
+  .chart { display:flex; align-items:flex-end; gap:4px; height:150px; padding-top:8px; }
+  .chart .col { flex:1 1 0; display:flex; flex-direction:column; justify-content:flex-end; align-items:center; gap:5px; min-width:0; }
+  .chart .col .bar { width:70%; max-width:26px; background: linear-gradient(180deg, var(--brand-2), var(--brand)); border-radius:4px 4px 0 0; min-height:2px; }
+  .chart .col .d { font-size:.62rem; color:var(--muted); white-space:nowrap; transform: rotate(-45deg); transform-origin: top left; }
+  .chart-x { display:flex; gap:4px; margin-top:20px; }
+  .bar-row { display:grid; grid-template-columns: minmax(0,1fr) 120px 52px; align-items:center; gap:10px; margin-bottom:8px; }
+  .bar-label { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:.9rem; color:var(--text); }
+  .bar-track { background: color-mix(in srgb, var(--brand) 12%, transparent); border-radius:6px; height:10px; overflow:hidden; }
+  .bar-fill { display:block; height:100%; background: linear-gradient(90deg, var(--brand), var(--accent)); border-radius:6px; }
+  .bar-n { text-align:right; font-variant-numeric: tabular-nums; font-weight:700; font-size:.9rem; }
+  .empty { color:var(--muted); font-size:.9rem; padding:8px 0; }
+  table.recent { width:100%; border-collapse:collapse; font-size:.85rem; }
+  table.recent th, table.recent td { text-align:left; padding:7px 8px; border-bottom:1px solid var(--border); white-space:nowrap; }
+  table.recent th { color:var(--muted); font-weight:600; text-transform:uppercase; font-size:.72rem; letter-spacing:.04em; }
+  table.recent td.k { font-weight:700; }
+  .scroll { overflow-x:auto; }
+  .tag { display:inline-block; font-size:.72rem; padding:2px 8px; border-radius:999px; background: color-mix(in srgb, var(--brand) 12%, transparent); color: var(--brand-ink); font-weight:600; }
+  .notice { background: color-mix(in srgb, var(--accent) 12%, var(--surface)); border-left:3px solid var(--accent); border-radius: var(--radius-sm); padding:16px 18px; color:var(--text); }
+  .notice code { font-size:.85rem; }
+</style>
+</head>
+<body>
+<div class="adm-wrap">
+  <div class="adm-top">
+    <div>
+      <h1>Analytics · Power Tools for Coaches</h1>
+    </div>
+    <div class="ranges">
+      <% ['1','7','30','0'].forEach(function(d){ var lbl = d==='1'?'24h':(d==='0'?'All':d+'d'); %>
+        <a class="<%= String(days === (d==='0'?0:Number(d))) ? 'active' : '' %>" href="/admin?days=<%= d %>"><%= lbl %></a>
+      <% }); %>
+    </div>
+  </div>
+  <p class="adm-sub">First-party tracking · times shown in UTC · IPs are hashed, never stored raw · <a href="/">← back to site</a></p>
+
+  <% if (!ready || !stats) { %>
+    <div class="notice">
+      <b>Storage not ready — tracking is disabled.</b><br>
+      Set <code>DB_PATH</code> to a file on a mounted Railway volume (e.g. <code>/data/analytics.db</code>) and redeploy.
+      The site keeps working normally in the meantime; events simply aren't recorded until storage is available.
+    </div>
+  <% } else {
+      function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+      function num(n){ return Number(n||0).toLocaleString('en-US'); }
+      function bars(list){
+        if(!list || !list.length) return '<div class="empty">No data yet.</div>';
+        var max = Math.max.apply(null, list.map(function(r){return r.n;}).concat([1]));
+        return list.map(function(r){
+          var w = Math.max(2, Math.round(r.n / max * 100));
+          return '<div class="bar-row"><span class="bar-label" title="'+esc(r.label)+'">'+esc(r.label)+'</span>'
+               + '<span class="bar-track"><span class="bar-fill" style="width:'+w+'%"></span></span>'
+               + '<span class="bar-n">'+num(r.n)+'</span></div>';
+        }).join('');
+      }
+      var k = stats.kpis || {};
+      var pv = Number(k.pageviews||0);
+      var ctr = pv > 0 ? (Number(k.tool_clicks||0)/pv*100).toFixed(1)+'%' : '—';
+      var refs = (stats.referrers||[]).filter(function(r){ return r.label !== ownHost; });
+      var maxPv = Math.max.apply(null, (stats.series||[]).map(function(s){return s.pageviews;}).concat([1]));
+  %>
+    <div class="kpis">
+      <div class="kpi"><div class="k-n"><%= num(k.pageviews) %></div><div class="k-l">Pageviews</div></div>
+      <div class="kpi"><div class="k-n"><%= num(k.sessions) %></div><div class="k-l">Unique sessions</div></div>
+      <div class="kpi"><div class="k-n"><%= num(k.new_sessions) %></div><div class="k-l">New visitors</div></div>
+      <div class="kpi"><div class="k-n"><%= num(k.tool_clicks) %></div><div class="k-l">Tool click-throughs</div></div>
+      <div class="kpi"><div class="k-n"><%= ctr %></div><div class="k-l">Click-through rate</div></div>
+    </div>
+
+    <div class="panel" style="margin-bottom:16px;">
+      <h2>Daily traffic — pageviews</h2>
+      <% if (!stats.series || !stats.series.length) { %>
+        <div class="empty">No data yet.</div>
+      <% } else { %>
+        <div class="chart">
+          <% stats.series.forEach(function(s){ var h = Math.max(2, Math.round(s.pageviews / maxPv * 140)); %>
+            <div class="col">
+              <div class="bar" style="height:<%= h %>px" title="<%= s.day %> — <%= num(s.pageviews) %> pageviews, <%= num(s.sessions) %> sessions"></div>
+              <div class="d"><%= s.day.slice(5) %></div>
+            </div>
+          <% }); %>
+        </div>
+      <% } %>
+    </div>
+
+    <div class="grid2">
+      <div class="panel"><h2>UTM source</h2><%- bars(stats.sources) %></div>
+      <div class="panel"><h2>UTM medium</h2><%- bars(stats.mediums) %></div>
+      <div class="panel"><h2>UTM campaign</h2><%- bars(stats.campaigns) %></div>
+      <div class="panel"><h2>Tool click-throughs</h2><%- bars(stats.toolClicks) %></div>
+      <div class="panel"><h2>Top pages</h2><%- bars(stats.topPages) %></div>
+      <div class="panel"><h2>Referrers (external)</h2><%- bars(refs) %></div>
+      <div class="panel"><h2>Device</h2><%- bars(stats.devices) %></div>
+      <div class="panel"><h2>Browser</h2><%- bars(stats.browsers) %></div>
+      <div class="panel"><h2>Operating system</h2><%- bars(stats.os) %></div>
+    </div>
+
+    <div class="panel">
+      <h2>Recent events</h2>
+      <% if (!stats.recent || !stats.recent.length) { %>
+        <div class="empty">No events yet.</div>
+      <% } else { %>
+        <div class="scroll">
+          <table class="recent">
+            <thead><tr>
+              <th>Time (UTC)</th><th>Event</th><th>Path / Tool</th><th>Source</th><th>Medium</th><th>Campaign</th><th>Device</th><th>Browser</th><th>OS</th><th>Referrer</th>
+            </tr></thead>
+            <tbody>
+              <% stats.recent.forEach(function(r){ %>
+                <tr>
+                  <td><%= new Date(Number(r.ts)).toISOString().replace('T',' ').slice(0,16) %></td>
+                  <td class="k"><span class="tag"><%= r.kind %></span></td>
+                  <td><%= r.kind === 'tool_click' ? (r.tool || '—') : (r.path || '/') %></td>
+                  <td><%= r.utm_source || '—' %></td>
+                  <td><%= r.utm_medium || '—' %></td>
+                  <td><%= r.utm_campaign || '—' %></td>
+                  <td><%= r.device || '—' %></td>
+                  <td><%= r.browser || '—' %></td>
+                  <td><%= r.os || '—' %></td>
+                  <td><%= r.referrer_host || '—' %></td>
+                </tr>
+              <% }); %>
+            </tbody>
+          </table>
+        </div>
+      <% } %>
+    </div>
+  <% } %>
+</div>
+</body>
+</html>
