@@ -54,6 +54,9 @@
       <% ['1','7','30','0'].forEach(function(d){ var lbl = d==='1'?'24h':(d==='0'?'All':d+'d'); %>
         <a class="<%= String(days === (d==='0'?0:Number(d))) ? 'active' : '' %>" href="/admin?days=<%= d %>"><%= lbl %></a>
       <% }); %>
+      <form method="post" action="/admin/logout" style="display:inline;">
+        <button type="submit" class="ranges-signout" style="font-size:.85rem;font-weight:600;padding:7px 12px;border-radius:10px;border:1px solid var(--border);color:var(--muted);background:transparent;cursor:pointer;">Sign out</button>
+      </form>
     </div>
   </div>
   <p class="adm-sub">First-party tracking · times shown in UTC · IPs are hashed, never stored raw · <a href="/">← back to site</a></p>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title><%= title %></title>
+<link rel="stylesheet" href="/styles.css?v=<%= site.assetVersion %>">
+<style>
+  .login-wrap { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; }
+  .login-card { width: 100%; max-width: 380px; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 16px; box-shadow: var(--shadow-lg); padding: 28px 26px; display: flex; flex-direction: column; gap: 16px; }
+  .login-card h1 { font-size: 1.4rem; font-weight: 800; }
+  .login-sub { color: var(--muted); font-size: .85rem; margin-top: -8px; }
+  .login-card label { display: flex; flex-direction: column; gap: 6px; font-size: .85rem; font-weight: 600; color: var(--muted); }
+  .login-card input { width: 100%; padding: 11px 13px; border: 1px solid var(--border); border-radius: 10px;
+    background: var(--bg); color: var(--text); font-size: 1rem; }
+  .login-card input:focus { outline: none; border-color: var(--accent, #6446e6); }
+  .login-card .btn { width: 100%; justify-content: center; margin-top: 4px; }
+  .login-err { background: rgba(220,38,38,.12); border: 1px solid rgba(220,38,38,.4); color: #ef4444;
+    border-radius: 10px; padding: 10px 12px; font-size: .85rem; }
+  .login-brand { display: flex; align-items: center; gap: 8px; font-weight: 800; }
+</style>
+</head>
+<body>
+  <main class="login-wrap">
+    <form class="login-card" method="post" action="/admin/login" autocomplete="on">
+      <div class="login-brand"><span aria-hidden>⚡</span> Power Tools Admin</div>
+      <div>
+        <h1>Sign in</h1>
+        <p class="login-sub"><%= site.domain %></p>
+      </div>
+      <% if (error) { %><div class="login-err"><%= error %></div><% } %>
+      <label>Username
+        <input name="username" autocomplete="username" autofocus required <%= configured ? '' : 'disabled' %>>
+      </label>
+      <label>Password
+        <input name="password" type="password" autocomplete="current-password" required <%= configured ? '' : 'disabled' %>>
+      </label>
+      <button class="btn btn-primary" type="submit" <%= configured ? '' : 'disabled' %>>Sign in</button>
+    </form>
+  </main>
+</body>
+</html>

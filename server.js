@@ -17,12 +17,15 @@ app.set('views', path.join(__dirname, 'views'));
 
 // Small JSON body for the tracking beacon.
 app.use(express.json({ limit: '32kb' }));
+// Form body for the admin login POST.
+app.use(express.urlencoded({ extended: false, limit: '16kb' }));
 
 // Static assets (styles.css, images, etc.)
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: '1h' }));
 
-// Shared locals available to every view
-const base = { tools, policies, contact, site };
+// Shared locals available to every view. metaPixelId is the SAME Meta pixel used by
+// the Assess360 SaaS funnel — set META_PIXEL_ID on this service to fire PageView here.
+const base = { tools, policies, contact, site, metaPixelId: process.env.META_PIXEL_ID || null };
 
 // Home
 app.get('/', (req, res) => {
@@ -99,26 +102,75 @@ function safeEqual(a, b) {
   return crypto.timingSafeEqual(ab, bb);
 }
 
-function adminAuth(req, res, next) {
-  const pass = process.env.ADMIN_PASSWORD;
-  if (!pass) {
-    return res.status(503).type('text/plain')
-      .send('Admin not configured. Set the ADMIN_PASSWORD environment variable to enable /admin.');
-  }
-  const user = process.env.ADMIN_USER || 'admin';
-  const m = /^Basic (.+)$/.exec(req.headers.authorization || '');
-  if (m) {
-    const decoded = Buffer.from(m[1], 'base64').toString();
-    const idx = decoded.indexOf(':');
-    const u = decoded.slice(0, idx);
-    const p = decoded.slice(idx + 1);
-    if (u === user && safeEqual(p, pass)) return next();
-  }
-  res.set('WWW-Authenticate', 'Basic realm="Power Tools Admin", charset="UTF-8"')
-    .status(401).type('text/plain').send('Authentication required.');
+// Cookie-based admin session (a normal login form, not the browser's Basic-auth
+// popup). The cookie holds an HMAC of a fixed marker keyed by the admin secret, so
+// it can't be forged without the secret and needs no server-side store.
+const ADMIN_COOKIE = 'pt_admin';
+const SESSION_SECRET = process.env.ADMIN_SESSION_SECRET || process.env.ADMIN_PASSWORD || '';
+
+function adminToken() {
+  return crypto.createHmac('sha256', SESSION_SECRET).update('pt-admin-v1').digest('hex');
 }
 
-app.get('/admin', adminAuth, (req, res) => {
+function parseCookies(req) {
+  const out = {};
+  const raw = req.headers.cookie;
+  if (!raw) return out;
+  for (const part of raw.split(';')) {
+    const i = part.indexOf('=');
+    if (i < 0) continue;
+    out[part.slice(0, i).trim()] = decodeURIComponent(part.slice(i + 1).trim());
+  }
+  return out;
+}
+
+function isAdmin(req) {
+  if (!SESSION_SECRET) return false;
+  const tok = parseCookies(req)[ADMIN_COOKIE];
+  return !!tok && safeEqual(tok, adminToken());
+}
+
+// Login form (normal HTML page).
+app.get('/admin/login', (req, res) => {
+  if (isAdmin(req)) return res.redirect('/admin');
+  res.render('admin-login', Object.assign({}, base, {
+    page: 'admin',
+    title: 'Sign in — Power Tools Admin',
+    description: 'Admin sign in',
+    error: null,
+    configured: !!process.env.ADMIN_PASSWORD
+  }));
+});
+
+app.post('/admin/login', (req, res) => {
+  const pass = process.env.ADMIN_PASSWORD;
+  const user = process.env.ADMIN_USER || 'admin';
+  const u = (req.body && req.body.username) || '';
+  const p = (req.body && req.body.password) || '';
+  const render = (error) => res.status(401).render('admin-login', Object.assign({}, base, {
+    page: 'admin', title: 'Sign in — Power Tools Admin', description: 'Admin sign in',
+    error, configured: !!pass
+  }));
+  if (!pass) return render('Admin is not configured yet. Set the ADMIN_PASSWORD environment variable.');
+  if (u === user && safeEqual(p, pass)) {
+    res.cookie(ADMIN_COOKIE, adminToken(), {
+      httpOnly: true,
+      sameSite: 'lax',
+      secure: process.env.NODE_ENV === 'production',
+      maxAge: 30 * 86400000
+    });
+    return res.redirect('/admin');
+  }
+  return render('Incorrect username or password.');
+});
+
+app.post('/admin/logout', (req, res) => {
+  res.clearCookie(ADMIN_COOKIE);
+  res.redirect('/admin/login');
+});
+
+app.get('/admin', (req, res) => {
+  if (!isAdmin(req)) return res.redirect('/admin/login');
   const allowed = { '1': 1, '7': 7, '30': 30, '0': 0 };
   const key = Object.prototype.hasOwnProperty.call(allowed, String(req.query.days)) ? String(req.query.days) : '7';
   const days = allowed[key];
