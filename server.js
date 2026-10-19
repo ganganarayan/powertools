@@ -31,8 +31,8 @@ const base = { tools, policies, contact, site, metaPixelId: process.env.META_PIX
 app.get('/', (req, res) => {
   res.render('index', Object.assign({}, base, {
     page: 'home',
-    title: "Power Tools for Coaches — 6 tools that do what the popular apps can't",
-    description: 'Assess360, A Video Router, VidaPulse, Revenue OS, Cloudz Copy and AI Gita Mentor — a suite of power tools built for coaches. Free to start.'
+    title: "Power Tools for Business — 6 tools that do what the popular apps can't",
+    description: 'Assess360, A Video Router, VidaPulse, Revenue OS, Cloudz Copy and AI Gita Mentor — a suite of power tools built for growing businesses. Free to start.'
   }));
 });
 
@@ -177,7 +177,7 @@ app.get('/admin', (req, res) => {
   const since = days > 0 ? Date.now() - days * 86400000 : 0;
   res.render('admin', Object.assign({}, base, {
     page: 'admin',
-    title: 'Analytics — Power Tools for Coaches',
+    title: 'Analytics — Power Tools for Business',
     description: 'Admin analytics',
     stats: db.getStats(since),
     ready: db.isReady(),
@@ -194,14 +194,14 @@ app.use((req, res) => {
   res.status(404).render('404', Object.assign({}, base, {
     page: 'policy',
     pageTitle: 'Page not found',
-    title: 'Page not found — Power Tools for Coaches',
+    title: 'Page not found — Power Tools for Business',
     description: 'The page you were looking for does not exist.'
   }));
 });
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-  console.log('Power Tools for Coaches running on port ' + port);
+  console.log('Power Tools for Business running on port ' + port);
 });
 
 module.exports = app;

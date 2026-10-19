@@ -13,9 +13,9 @@ const contact = {
 };
 
 const site = {
-  name: 'Power Tools for Coaches',
+  name: 'Power Tools for Business',
   domain: 'powertools.divineleads.guru',
-  brandline: "Six tools that do what the popular apps can't — built for coaches by DivineLeads.",
+  brandline: "Six tools that do what the popular apps can't — built for growing businesses by DivineLeads.",
   assetVersion: '5'
 };
 
@@ -44,7 +44,7 @@ const tools = [
     whatItDoes: [
       '<b>Multi-dimensional scoring</b> — weight answers, build categories, and produce a real diagnostic, not just a form response.',
       '<b>Result tiers</b> — map score ranges to tailored outcomes, so each band gets its own message.',
-      '<b>360° / multi-rater</b> — collect self + peer + coach input and roll it into one picture.',
+      '<b>360° / multi-rater</b> — collect self + peer + manager input and roll it into one picture.',
       '<b>Instant personalised report</b> — a tailored result page and downloadable PDF the moment they submit.',
       '<b>Auto-segmentation &amp; lead scoring</b> — respondents are tagged and prioritised for follow-up automatically.'
     ],
@@ -55,7 +55,7 @@ const tools = [
       points: [
         'They <b>collect answers</b>. Assess360 <b>diagnoses and segments</b>.',
         'They give a "thank you" screen. Assess360 gives a <b>personalised report</b>.',
-        'No true 360° multi-rater roll-up. No weighted, category-based scoring that a coach can actually act on.'
+        'No true 360° multi-rater roll-up. No weighted, category-based scoring that you can actually act on.'
       ],
       punch: 'That gap is the reason Assess360 exists.'
     },
@@ -139,7 +139,7 @@ const tools = [
       named: ['Wistia', 'Vidyard', 'YouTube analytics'],
       points: [
         'They show plays and heatmaps. VidaPulse shows <b>drop-off tied to your sales beats</b>.',
-        'No CTA-aware analysis, no conversion correlation, no VSL A/B built for coaches.',
+        'No CTA-aware analysis, no conversion correlation, no VSL A/B built for operators.',
         'You end up guessing which line to fix. VidaPulse points at it.'
       ],
       punch: 'That missing layer is exactly what VidaPulse is.'
@@ -157,8 +157,8 @@ const tools = [
     eyebrow: '💰 Revenue Operating System',
     subject: 'Revenue%20OS%20%E2%80%94%20question',
     appUrl: 'https://revenueos.divineleads.guru',
-    metaTitle: 'Revenue OS — the revenue operating system for coaches',
-    metaDesc: 'Revenue OS runs your whole coach revenue on one system — lead generation, nurture, calendar booking, payment with 0 transaction fee, order bumps, upsells and LMS delivery — in one AI-driven revenue operating system. The most-demanded tool by coaches.',
+    metaTitle: 'Revenue OS — the revenue operating system for growing businesses',
+    metaDesc: 'Revenue OS runs your whole business revenue on one system — lead generation, nurture, calendar booking, payment with 0 transaction fee, order bumps, upsells and LMS delivery — in one AI-driven revenue operating system. The most-demanded tool by growing businesses.',
     symptom: 'Your revenue lives in six disconnected apps — and nobody owns the number.',
     cure: 'One system: capture → nurture → calendar → payment → LMS, <b>0 transaction fee</b>.',
     tileLines: [
@@ -167,7 +167,7 @@ const tools = [
       '<b>Revenue-generating systems built in</b> — order bumps, upsells, follow-up and one revenue dashboard.'
     ],
     lede: 'You hear "CRM" and tune out — <b>so let\'s be clear: this isn\'t a CRM, it\'s your revenue operating system.</b> Revenue OS carries a stranger from <b>lead-gen → nurture → calendar → payment → course delivery in your LMS</b> — with order bumps, upsells and <b>zero transaction fees</b>. Capture to cash to classroom, on one number.',
-    heroNote: 'Free to start · No credit card · The most-demanded tool by coaches',
+    heroNote: 'Free to start · No credit card · The most-demanded tool by growing businesses',
     whatTitle: 'The revenue engine, one system',
     whatItDoes: [
       '<b>Lead generation</b> — capture pages, forms and quiz hand-offs feed leads straight in.',
@@ -179,12 +179,12 @@ const tools = [
     ],
     versus: {
       title: 'Why not "just a CRM"?',
-      intro: "A CRM stores contacts and stops. Coaches don't need a filing cabinet — they need the <b>system that makes the revenue</b> to run itself.",
+      intro: "A CRM stores contacts and stops. You don't need a filing cabinet — you need the <b>system that makes the revenue</b> to run itself.",
       named: ['Generic CRMs', 'Spreadsheets', 'Checkout + LMS glued together'],
       points: [
         'No more stitching a form tool, a payment tool and an LMS with fragile automations.',
         'Payment, upsells and course access are <b>one continuous revenue flow</b>, not three logins.',
-        'Built around how coaches actually make money — not generic sales teams.'
+        'Built around how you actually make money — not generic sales teams.'
       ],
       punch: "It's not a CRM — it's the system that makes the revenue."
     },
@@ -207,7 +207,7 @@ const tools = [
     tileLines: [
       'Move &amp; sync data between <b>any two clouds</b> — Drive, Dropbox, OneDrive, S3 and more.',
       'No downloading, no re-uploading — <b>seamless direct transfer</b>.',
-      'Migrate a whole coaching library in a few clicks.'
+      'Migrate a whole content library in a few clicks.'
     ],
     lede: 'Move your cloud data between <b>any two clouds, seamlessly</b> — no downloading to your laptop, no dragging files, no waiting on your home internet. Point source, point destination, and Cloudz Copy carries it cloud-to-cloud.',
     heroNote: 'Free to start · No credit card',
@@ -217,7 +217,7 @@ const tools = [
       '<b>Direct cloud-to-cloud</b> — data moves between providers, not through your device.',
       '<b>Migrate or sync</b> — a one-time move of a whole library, or keep two clouds mirrored.',
       '<b>Bulk &amp; folders</b> — whole trees, not one file at a time.',
-      '<b>No local bandwidth</b> — big coaching libraries move without pinning your connection.'
+      '<b>No local bandwidth</b> — big content libraries move without pinning your connection.'
     ],
     versus: {
       title: 'Why it beats the manual way',
@@ -278,12 +278,12 @@ const tools = [
 ];
 
 const policies = [
-  { slug: 'privacy',    label: 'Privacy Policy',         title: 'Privacy Policy',              metaTitle: 'Privacy Policy — Power Tools for Coaches',              metaDesc: 'Privacy Policy for the Power Tools for Coaches suite by DivineLeads.' },
-  { slug: 'terms',      label: 'Terms & Conditions',     title: 'Terms & Conditions',          metaTitle: 'Terms & Conditions — Power Tools for Coaches',          metaDesc: 'Terms and Conditions for the Power Tools for Coaches suite by DivineLeads.' },
-  { slug: 'refund',     label: 'Refund & Cancellation',  title: 'Refund & Cancellation Policy', metaTitle: 'Refund & Cancellation Policy — Power Tools for Coaches', metaDesc: 'Refund and Cancellation Policy for the Power Tools for Coaches suite by DivineLeads.' },
-  { slug: 'delivery',   label: 'Delivery Policy',        title: 'Service Delivery Policy',      metaTitle: 'Delivery Policy — Power Tools for Coaches',             metaDesc: 'Service Delivery Policy for the Power Tools for Coaches suite by DivineLeads. All products are digital and delivered electronically.' },
-  { slug: 'cookies',    label: 'Cookie Policy',          title: 'Cookie Policy',               metaTitle: 'Cookie Policy — Power Tools for Coaches',               metaDesc: 'Cookie Policy for the Power Tools for Coaches suite by DivineLeads.' },
-  { slug: 'disclaimer', label: 'Disclaimer',             title: 'Disclaimer',                  metaTitle: 'Disclaimer — Power Tools for Coaches',                  metaDesc: 'Disclaimer for the Power Tools for Coaches suite by DivineLeads.' }
+  { slug: 'privacy',    label: 'Privacy Policy',         title: 'Privacy Policy',              metaTitle: 'Privacy Policy — Power Tools for Business',              metaDesc: 'Privacy Policy for the Power Tools for Business suite by DivineLeads.' },
+  { slug: 'terms',      label: 'Terms & Conditions',     title: 'Terms & Conditions',          metaTitle: 'Terms & Conditions — Power Tools for Business',          metaDesc: 'Terms and Conditions for the Power Tools for Business suite by DivineLeads.' },
+  { slug: 'refund',     label: 'Refund & Cancellation',  title: 'Refund & Cancellation Policy', metaTitle: 'Refund & Cancellation Policy — Power Tools for Business', metaDesc: 'Refund and Cancellation Policy for the Power Tools for Business suite by DivineLeads.' },
+  { slug: 'delivery',   label: 'Delivery Policy',        title: 'Service Delivery Policy',      metaTitle: 'Delivery Policy — Power Tools for Business',             metaDesc: 'Service Delivery Policy for the Power Tools for Business suite by DivineLeads. All products are digital and delivered electronically.' },
+  { slug: 'cookies',    label: 'Cookie Policy',          title: 'Cookie Policy',               metaTitle: 'Cookie Policy — Power Tools for Business',               metaDesc: 'Cookie Policy for the Power Tools for Business suite by DivineLeads.' },
+  { slug: 'disclaimer', label: 'Disclaimer',             title: 'Disclaimer',                  metaTitle: 'Disclaimer — Power Tools for Business',                  metaDesc: 'Disclaimer for the Power Tools for Business suite by DivineLeads.' }
 ];
 
 module.exports = { contact, site, tools, policies };
