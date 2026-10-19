@@ -5,6 +5,7 @@
   <div class="wrap">
     <span class="eyebrow"><%= tool.eyebrow %></span>
     <h1><%= tool.name %></h1>
+    <% if (tool.subtitle) { %><p class="tool-sub"><%= tool.subtitle %></p><% } %>
     <p class="lede"><%- tool.lede %></p>
     <div class="hero-cta">
       <a class="btn btn-primary btn-lg" id="start" href="<%= tool.appUrl %>" target="_blank" rel="noopener" data-track="tool_click" data-tool="<%= tool.slug %>">Start free</a>

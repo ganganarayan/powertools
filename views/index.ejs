@@ -29,6 +29,7 @@
         <div class="tile-ico"><% if (t.logo) { %><img class="tile-logo" src="<%= t.logo %>?v=<%= site.assetVersion %>" alt="<%= t.name %> logo" width="34" height="34"><% } else { %><%= t.icon %><% } %></div>
         <div class="kicker"><%= t.kicker %></div>
         <h3><%= t.name %></h3>
+        <% if (t.subtitle) { %><p class="tile-sub"><%= t.subtitle %></p><% } %>
         <% if (t.symptom) { %>
         <div class="symptom">
           <p class="s-pain"><%- t.symptom %></p>

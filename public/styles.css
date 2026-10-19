@@ -245,3 +245,7 @@ a:hover { text-decoration: underline; }
 }
 .offer-head { font-size: clamp(1.5rem, 3.6vw, 2.3rem); font-weight: 800; max-width: 26ch; margin: 0 auto .5em; }
 .offer-sub { color: var(--muted); font-size: 1.1rem; max-width: 60ch; margin: 0 auto 26px; }
+
+/* lead-qual subtitle under tool name */
+.tile-sub { margin: -4px 0 14px; color: var(--muted); font-weight: 600; font-size: .98rem; }
+.tool-sub { margin: -6px 0 18px; color: var(--muted); font-weight: 600; font-size: 1.1rem; }

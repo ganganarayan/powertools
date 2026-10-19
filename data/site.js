@@ -16,7 +16,7 @@ const site = {
   name: 'Power Tools for Business',
   domain: 'powertools.divineleads.guru',
   brandline: "Six tools that do what the popular apps can't — built for growing businesses by DivineLeads.",
-  assetVersion: '5'
+  assetVersion: '6'
 };
 
 const tools = [
@@ -24,11 +24,12 @@ const tools = [
     slug: 'assess360',
     name: 'Assess360',
     icon: '🎯',
-    kicker: 'Assessment Engine',
-    eyebrow: '🎯 Assessment Engine',
+    kicker: 'Lead Qualification Engine',
+    eyebrow: '🎯 Lead Qualification Engine',
+    subtitle: 'Lead qualification software',
     subject: 'Assess360%20%E2%80%94%20question',
     appUrl: 'https://assess360.divineleads.guru',
-    metaTitle: 'Assess360 — assessments that score, segment & report automatically',
+    metaTitle: 'Assess360 — lead qualification software that scores & segments leads',
     metaDesc: 'Assess360 builds scored, multi-section 360° assessments that segment leads and deliver instant personalised reports — beyond Google Forms, JotForm, Typeform, AppSheet and ScoreApp.',
     symptom: 'Half your calls were dead before they booked — and you found out too late.',
     cure: 'Scores and segments leads <b>before</b> they ever reach your calendar.',
