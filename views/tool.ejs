@@ -54,7 +54,7 @@
     <div class="section-head"><h2>Ask about <%= tool.name %></h2><p><b>Put "<%= tool.name %>" in your subject line</b> so we answer fast.</p></div>
     <div class="contact">
       <div class="c-card"><div class="lbl">WhatsApp</div><div class="val"><a href="<%= contact.waLink %>"><%= contact.wa %></a></div></div>
-      <div class="c-card"><div class="lbl">Email</div><div class="val"><a href="mailto:<%= contact.email %>?subject=<%= tool.subject %>"><%= contact.email %></a></div></div>
+      <div class="c-card"><div class="lbl">Email</div><div class="val"><a href="mailto:<%= tool.email || contact.email %>?subject=<%= tool.subject %>"><%= tool.email || contact.email %></a></div></div>
       <div class="c-card"><div class="lbl">Subject line</div><div class="val">"<%= tool.name %> — question"</div></div>
     </div>
   </div>

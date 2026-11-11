@@ -236,45 +236,46 @@ const tools = [
   },
 
   {
-    slug: 'ai-gita-mentor',
-    name: 'AI Gita Mentor',
-    icon: '🕉️',
-    kicker: 'AI Wisdom Mentor',
-    eyebrow: '🕉️ AI Wisdom Mentor',
-    subject: 'AI%20Gita%20Mentor%20%E2%80%94%20question',
-    appUrl: 'https://ai.applygitawisdom.com',
-    metaTitle: 'AI Gita Mentor — an always-on mentor grounded in Bhagavad Gita wisdom',
-    metaDesc: 'AI Gita Mentor answers life, leadership and mindset questions with guidance grounded in the Bhagavad Gita — pointing to the verse behind every answer, available 24/7 for you and your clients.',
-    symptom: 'Your clients spiral between sessions — and you can\'t be on call 24/7.',
-    cure: 'An always-on mentor grounded in <b>Bhagavad Gita wisdom</b>, answering anytime.',
+    slug: 'content-engine',
+    name: 'Content Engine',
+    icon: '🧲',
+    kicker: 'Content-to-Lead Engine',
+    eyebrow: '🧲 Content-to-Lead Engine',
+    subject: 'Content%20Engine%20-%20question',
+    appUrl: 'https://content360.divineleads.guru',
+    email: 'content360@divineleads.guru',
+    metaTitle: 'Content Engine: turn content and DMs into tracked, attributed leads',
+    metaDesc: 'Content Engine ties every lead back to the exact post, DM, or link that produced it, so you know which content brings the leads and the sales. All your content working as one lead engine.',
+    symptom: 'You post every day, but you cannot tell which content actually brought the lead or the sale.',
+    cure: 'Ties every lead back to the <b>exact post, DM, or link</b> that produced it.',
     tileLines: [
-      'Ask any question and get guidance <b>grounded in the Bhagavad Gita</b> — with the verse behind it.',
-      'A <b>24/7 wisdom companion</b> for you and your clients, between every session.',
-      'Not generic AI fluff — <b>rooted in the Gita</b>, not made up.'
+      'Turn your content and DMs into <b>tracked, attributed leads</b>, not guesswork.',
+      'See <b>which post, DM, or link</b> produced each lead and each sale.',
+      'All your content working as <b>one lead engine</b>, not scattered across apps.'
     ],
-    lede: 'Your clients don\'t stop needing guidance when the call ends — but you can\'t be on call at 2am. <b>AI Gita Mentor</b> is an always-on mentor grounded in the <b>Bhagavad Gita</b>: ask it anything and it answers from the text, pointing to the verse behind the guidance.',
+    lede: 'You create content every day, but attribution is a black box: you cannot say which post or DM actually produced a lead. Content Engine closes that gap. It tracks every lead back to the exact content, DM, or link that brought them, so you double down on what works and stop guessing.',
     heroNote: 'Free to start · No credit card',
     whatTitle: 'What it does',
     whatItDoes: [
-      '<b>Ask anything</b> — career, conflict, fear, focus, purpose — and get a grounded answer, not a platitude.',
-      '<b>Rooted in the Gita</b> — guidance drawn from Bhagavad Gita teachings, with the relevant verse cited.',
-      '<b>Always on</b> — your clients get support the moment they need it, not just in the next session.',
-      '<b>Conversational</b> — it holds the thread and meets each person where they actually are.',
-      '<b>Yours to share</b> — hand it to your audience as a wisdom companion that keeps them close to your work.'
+      '<b>Lead attribution</b>, every lead tied to the exact post, DM, or link that produced it.',
+      '<b>DM-link tracking</b>, know which conversations and campaigns actually convert.',
+      '<b>One content pipeline</b>, your posts, DMs, and links feeding a single lead flow.',
+      '<b>Source clarity</b>, your best content and channels surfaced at a glance.',
+      '<b>Feeds your funnel</b>, attributed leads flow straight into the rest of your stack.'
     ],
     versus: {
-      title: "What generic AI can't do",
-      intro: 'Ask a general chatbot for Gita guidance and it improvises — sometimes inventing verses that were never in the text.',
-      named: ['Generic AI chatbots', 'Motivational quote apps', 'A web search'],
+      title: "What the others can't do",
+      intro: 'Analytics tools count views and likes. None of them tell you which piece of content produced an actual, named lead.',
+      named: ['Native platform insights', 'Link shorteners', 'Spreadsheets'],
       points: [
-        'They paraphrase a vibe. AI Gita Mentor answers <b>from the Gita</b> and points to the verse.',
-        'No 24/7 companion your clients can actually lean on between sessions.',
-        'Quotes without context vs. wisdom applied to the exact situation they\'re in.'
+        'They show reach and clicks. Content Engine shows <b>the lead behind the click</b>.',
+        'No attribution from a DM or a post to a named lead in your pipeline.',
+        'You guess what is working. Content Engine names it.'
       ],
-      punch: "Wisdom that's grounded, not guessed."
+      punch: 'Content that is measured is content that compounds.'
     },
-    ctaTitle: 'Give your people a mentor that never sleeps.',
-    ctaText: 'Try AI Gita Mentor free and ask it the question your client asked you last week.'
+    ctaTitle: 'Know exactly which content brings the leads.',
+    ctaText: 'Connect your content and start attributing every lead to the post, DM, or link that produced it. Free to start.'
   }
 ];
 
