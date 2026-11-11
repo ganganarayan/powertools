@@ -238,44 +238,46 @@ const tools = [
   {
     slug: 'content-engine',
     name: 'Content Engine',
-    icon: '🧲',
-    kicker: 'Content-to-Lead Engine',
-    eyebrow: '🧲 Content-to-Lead Engine',
+    icon: '📣',
+    kicker: 'Always-On Social Media Engine',
+    eyebrow: '📣 Always-On Social Media Engine',
+    subtitle: 'A post every day on every channel, made and published for you',
     subject: 'Content%20Engine%20-%20question',
     appUrl: 'https://content360.divineleads.guru',
     email: 'content360@divineleads.guru',
-    metaTitle: 'Content Engine: turn content and DMs into tracked, attributed leads',
-    metaDesc: 'Content Engine ties every lead back to the exact post, DM, or link that produced it, so you know which content brings the leads and the sales. All your content working as one lead engine.',
-    symptom: 'You post every day, but you cannot tell which content actually brought the lead or the sale.',
-    cure: 'Ties every lead back to the <b>exact post, DM, or link</b> that produced it.',
+    metaTitle: 'Content Engine: a post every day on every channel, made and published for you',
+    metaDesc: 'Content Engine turns your videos, or nothing at all, into finished posts with copy, thumbnails, voice and music. You approve, it publishes to up to 10 channels every day and turns comments into leads.',
+    symptom: 'You know you should post every day, but it is 11 PM and there is still no post.',
+    cure: 'Makes the post, you press <b>Approve</b>, it goes out <b>everywhere</b>.',
     tileLines: [
-      'Turn your content and DMs into <b>tracked, attributed leads</b>, not guesswork.',
-      'See <b>which post, DM, or link</b> produced each lead and each sale.',
-      'All your content working as <b>one lead engine</b>, not scattered across apps.'
+      'Turns your videos, <b>or nothing at all</b>, into finished posts: copy, thumbnails, voice and music.',
+      'You approve once, it publishes to <b>10 channels</b> every day: Instagram, YouTube, LinkedIn, X and more.',
+      'Every keyword comment gets a <b>DM with a personal link</b>, so comments turn into leads.'
     ],
-    lede: 'You create content every day, but attribution is a black box: you cannot say which post or DM actually produced a lead. Content Engine closes that gap. It tracks every lead back to the exact content, DM, or link that brought them, so you double down on what works and stop guessing.',
-    heroNote: 'Free to start · No credit card',
+    lede: 'Set it up once a month. Content Engine makes a finished post every day from your own videos, or from nothing at all, with copy, thumbnails in every size, voice and music. You press <b>Approve</b>. It publishes to every channel, reports what went live and turns comments into leads.',
+    heroNote: '7-day free trial · Priced in rupees · Cancel in one click',
     whatTitle: 'What it does',
     whatItDoes: [
-      '<b>Lead attribution</b>, every lead tied to the exact post, DM, or link that produced it.',
-      '<b>DM-link tracking</b>, know which conversations and campaigns actually convert.',
-      '<b>One content pipeline</b>, your posts, DMs, and links feeding a single lead flow.',
-      '<b>Source clarity</b>, your best content and channels surfaced at a glance.',
-      '<b>Feeds your funnel</b>, attributed leads flow straight into the rest of your stack.'
+      '<b>Three lanes, never a missed day</b>: your ready video first, then an AI video, then an image post.',
+      '<b>Makes the whole post</b>: AI copy, pictures, thumbnails in 16:9, 9:16 and 4:5, end card, voice and music.',
+      '<b>You stay in control</b>: Approve from the app or the daily email, or Disapprove with a reason and Remake.',
+      '<b>Publishes everywhere</b>: Instagram, Facebook, YouTube, TikTok, LinkedIn, Threads, X, Pinterest, with your link as the first comment.',
+      '<b>Comments become leads</b>: a keyword comment gets a DM with a personal link, and the Leads page shows who opened it.',
+      '<b>Fix mistakes fast</b>: retry only the failed channels, or take a post down from every platform at once.'
     ],
     versus: {
       title: "What the others can't do",
-      intro: 'Analytics tools count views and likes. None of them tell you which piece of content produced an actual, named lead.',
-      named: ['Native platform insights', 'Link shorteners', 'Spreadsheets'],
+      intro: 'Most social tools schedule the post <b>you</b> made. You still write, design, resize and upload every single one.',
+      named: ['Buffer', 'Hootsuite', 'Later', 'ManyChat'],
       points: [
-        'They show reach and clicks. Content Engine shows <b>the lead behind the click</b>.',
-        'No attribution from a DM or a post to a named lead in your pipeline.',
-        'You guess what is working. Content Engine names it.'
+        'Schedulers queue your posts. Content Engine <b>makes</b> them, then posts every day, even when you add nothing.',
+        'DM tools reply to comments but never make or post anything. Content Engine does both.',
+        'Take a live post down from every channel in one click, and see the real AI cost of every post.'
       ],
-      punch: 'Content that is measured is content that compounds.'
+      punch: 'Stop making posts. Start revenue from posts.'
     },
-    ctaTitle: 'Know exactly which content brings the leads.',
-    ctaText: 'Connect your content and start attributing every lead to the post, DM, or link that produced it. Free to start.'
+    ctaTitle: 'Your brand, posting every day, everywhere.',
+    ctaText: 'Try every feature for 7 days before the first charge. A 30-minute setup call connects your channels with you.'
   }
 ];
 
